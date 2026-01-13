@@ -31,5 +31,6 @@ Before coding components, define the following in the `:root` selector:
 - Use descriptive class names: `.hero-title`, `.footer-contact-list`, `.btn-primary`.
 - Avoid names based on appearance (e.g., `.red-text-right`).
 
+
 ---
 *Best Practices Manual v1.0*
