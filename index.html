@@ -8,91 +8,125 @@
 </head>
 
 <body>
-    <header>
-        <nav aria-label="Navegación principal">
-            <div class="nav__logo"></div>
-            <ul class="nav__menu">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Proyectos</a></li>
-                <li><a href="#">Mi Stack</a></li>
-                <li><a href="#">Sobre Mí</a></li>
-            </ul>
-            <button class="nav__hamburger" aria-label="Menú de navegación" aria-expanded="false"
-                aria-controls="nav-menu" id="nav-menu"></button>
+    <header class="header__section">
+        <div class="header__container">
+            <div class="header__content">
 
-        </nav>
+                <nav aria-label="Navegación principal">
+                    <div class="nav__logo"></div>
+                    <ul class="nav__menu" id="nav-menu">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Proyectos</a></li>
+                        <li><a href="#">Mi Stack</a></li>
+                        <li><a href="#">Sobre Mí</a></li>
+                    </ul>
+                    <button class="nav__hamburger" aria-label="Menú de navegación" aria-expanded="false"
+                        aria-controls="nav-menu"></button>
+
+                </nav>
+            </div>
+        </div>
     </header>
 
     <main>
         <!-- HERO SECTION -->
-        <section class="hero" aria-labelledby="hero-title">
-            <header class="hero__header">
-                <h1 class="hero__title">Carmen Tajuelo</h1>
-                <h2 class="hero__tagline">Desarrollo Web Creativo y Moderno</h2>
-                <p class="hero__description">Creo experiencias web únicas combinando diseño limpio, código semántico y
-                    las últimas tecnologías frontend. Cada proyecto es una oportunidad para innovar y una puerta a la
-                    creatividad.</p>
-                <img src="" class="hero__photo" alt="Carmen Tajuelo, desarrolladora web">
-            </header>
+        <section class="hero__section" aria-labelledby="hero-title">
+            <div class="hero__container">
+                <div class="hero__content">
+
+                    <header class="hero__header">
+                        <h1 class="hero__title" id="hero-title">Carmen Tajuelo</h1>
+                        <h2 class="hero__tagline">Desarrollo Web Creativo y Moderno</h2>
+                        <p class="hero__description">Creo experiencias web únicas combinando diseño limpio, código
+                            semántico y
+                            las últimas tecnologías frontend. Cada proyecto es una oportunidad para innovar y una puerta
+                            a la
+                            creatividad.</p>
+                        <img src="" class="hero__photo" alt="Carmen Tajuelo, desarrolladora web">
+                    </header>
+                </div>
+            </div>
         </section>
 
         <!-- PROJECTS SECTION -->
-        <section class="projects" aria-labelledby="projects-title">
-            <header class="projects__header">
-                <h2 class="projects__title">Proyectos Destacados</h2>
-                <h3 class="projects__subtitle">// 01_portfolio</h3>
-                <p class="projects__description">Una seleccion de mis trabajos más recientes y proyectos creativos</p>
-            </header>
+        <section class="projects__section" aria-labelledby="projects-title">
+            <div class="projects__container">
+                <div class="projects__content">
+
+                    <header class="projects__header">
+                        <h2 class="projects__title">Proyectos Destacados</h2>
+                        <h3 class="projects__subtitle">// 01_portfolio</h3>
+                        <p class="projects__description">Una seleccion de mis trabajos más recientes y proyectos
+                            creativos</p>
+                    </header>
+                </div>
+            </div>
         </section>
 
         <!-- STACK SECTION -->
-        <section class="stack" aria-labelledby="stack-title">
-            <header class="stack__header">
-                <h2 class="stack__title">Mi Stack Favorito</h2>
-                <h3 class="stack__subtitle">// 02_herramientas</h3>
-                <p class="stack__description">Herramientas y recursos que uso diariamente en mi trabajo</p>
-            </header>
+        <section class="stack__section" aria-labelledby="stack-title">
+            <div class="stack__container">
+                <div class="stack__content">
+
+                    <header class="stack__header">
+                        <h2 class="stack__title">Mi Stack Favorito</h2>
+                        <h3 class="stack__subtitle">// 02_herramientas</h3>
+                        <p class="stack__description">Herramientas y recursos que uso diariamente en mi trabajo</p>
+                    </header>
+                </div>
+            </div>
         </section>
 
         <!-- ABOUT SECTION -->
-        <section class="about" aria-labelledby="about-title">
-            <header class="about__header">
-                <h2 class="about__title">Conoce mi Historia</h2>
-                <h3 class="about__subtitle">// 03_sobre_mi</h3>
-                <p class="about__description">Desarrolladora web con pasión por el código limpio y el diseño creativo
-                </p>
-                <div class="about__text">
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                </div>
+        <section class="about__section" aria-labelledby="about-title">
+            <div class="about__container">
+                <div class="about__content">
 
-            </header>
+                    <header class="about__header">
+                        <h2 class="about__title">Conoce mi Historia</h2>
+                        <h3 class="about__subtitle">// 03_sobre_mi</h3>
+                        <p class="about__description">Desarrolladora web con pasión por el código limpio y el diseño
+                            creativo</p>
+                        <div class="about__text">
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </header>
+                </div>
+            </div>
         </section>
 
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="footer__logo"><img src="" alt="Logo"></div>
-        <p class="footer__tagline">Desarrollo web moderno y con creatividad</p>
-        <ul class="footer__menu">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Proyectos</a></li>
-            <li><a href="#">Mi Stack</a></li>
-            <li><a href="#">Sobre Mí</a></li>
-        </ul>
-        <div class="footer__social">
-            <a href="#" target="_blank" rel="noopener noreferrer" class="footer__social-link">
-                <img src="" class="footer__social-icon" alt="Github">
-                <span class="footer__social-label">Github</span>
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="footer__social-link">
-                <img src="" class="footer__social-icon" alt="Linkedin">
-                <span class="footer__social-label">Linkedin</span>
-            </a>
-        </div>
-        <div class="footer__copyright"> Copyright 2026 · Carmen Tajuelo · Diseñado y desarrollado con 💙 y código limpio
+    <footer class="footer__section">
+        <div class="footer__container">
+            <div class="footer__content">
+
+                <div class="footer__logo"><img src="" alt="Logo"></div>
+                <p class="footer__tagline">Desarrollo web moderno y con creatividad</p>
+                <ul class="footer__menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Proyectos</a></li>
+                    <li><a href="#">Mi Stack</a></li>
+                    <li><a href="#">Sobre Mí</a></li>
+                </ul>
+                <div class="footer__social">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+                        <img src="" class="footer__social-icon" alt="Github">
+                        <span class="footer__social-label">Github</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+                        <img src="" class="footer__social-icon" alt="Linkedin">
+                        <span class="footer__social-label">Linkedin</span>
+                    </a>
+                </div>
+                <div class="footer__copyright"> Copyright 2026 · Carmen Tajuelo · Diseñado y desarrollado con 💙 y
+                    código
+                    limpio
+                </div>
+            </div>
         </div>
 
     </footer>
