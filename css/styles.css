@@ -1,11 +1,126 @@
-/*RESET STYLE*/
+/* ---------------------------------------------------------
+   RESET STYLE
+   --------------------------------------------------------- */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* ---------------------------------------------------------
+   GLOBAL VARIABLES
+   --------------------------------------------------------- */
 :root {
+  /* MAIN COLOR PALETTE*/
+  --clr-primary: hsl(220, 90%, 56%);
+  --clr-secondary: hsl(210, 20%, 15%);
+  --clr-accent: hsl(150, 80%, 50%);
+
+  /* DOCUMENT COLORS */
+  --clr-bg: hsl(0, 0%, 100%);
+  --clr-text: var(--clr-secondary);
+  --clr-white: #ffffff;
+
+  /* RESPONSIVE TYPOGRAPHY*/
+  /*h1 - Hero main titles*/
+  --fs-xl: clamp(2.5rem, 8vw + 1rem, 5rem);
+  /*h2 - section headings */
+  --fs-l: clamp(1.75rem, 5vw + 1rem, 3rem);
+  /*h3 - subheadings */
+  --fs-m: clamp(1.1rem, 2vw + 1rem, 1.5rem);
+  /* standard body and paragraphgs */
+  --fs-s: 1rem;
+  /*small Captions or secondary info */
+  --fs-xs: 0.875rem;
+
+
+  /* FLUID SPACING SYSTEM */
+  --space-xs: clamp(0.5rem, 1vw, 0.75rem);
+  /*Extra small gaps: icons, tight labels*/
+  --space-s: clamp(1rem, 2vw, 1.5rem);
+  /*Standard internal padding: buttons, small cards*/
+  --space-m: clamp(1.5rem, 4vw, 3rem);
+  /*Gaps*/
+  --space-l: clamp(3rem, 8vw, 6rem);
+  /*Vertical padding between major sections*/
+
+  /* LAYOUT & UI CONSTANTS */
+  --container-max-width: 1200px;
+  /*Containers only */
+  --navbar-height: 80px;
+  /* Header Content area */
+  --border-radius: 8px;
+  /* Corner roundness */
+
+  /* ANIMATION SETTINGS */
+  /* Hover States & Simple transitions */
+  --transition-fast: 200ms ease;
 
 }
 
+/* ---------------------------------------------------------
+   GLOBAL STYLES
+   --------------------------------------------------------- */
+body {
+  font-size: var(--fs-s);
+  color: var(--clr-text);
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: var(--fs-xl);
+}
+
+h2 {
+  font-size: var(--fs-l);
+}
+
+h3 {
+  font-size: var(--fs-m);
+}
+
+
+/* ---------------------------------------------------------
+   ARCHITECTURE: 3-LAYER SYSTEM
+   --------------------------------------------------------- */
+
+/* LAYER 1: BLOCK (The Section)
+   Defines the semantic context and vertical breathing room
+*/
+header {
+  height: var(--navbar-height);
+  width: 100%;
+}
+
+section {
+  padding-block: var(--space-l);
+  width: 100%;
+}
+
+footer {
+  padding-block: var(--space-m);
+  width: 100%;
+}
+
+
+
+/* LAYER 2: CONTAINER
+   Defines max-width and keeps content centered
+*/
+[class$="__container"] {
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-s);
+}
+
+/* LAYER 3: CONTENT / AREAS
+   Handles internal layout distribution
+*/
+[class$="__content"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  gap: var(--space-m);
+}
