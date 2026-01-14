@@ -14,31 +14,31 @@
 :root {
   /* ---- DOCUMENT COLORS ---- */
   /* Background Colors */
-  --color-bg-main: 245, 230, 240;
+  --color-bg-main: #F5E6F0;
   /* Lavender Mist: Soft and clean main background */
-  --color-bg-secondary: 232, 213, 227;
+  --color-bg-secondary: #E8D5E3;
   /* Muted Rose: Subtle contrast for sections or cards */
 
   /* Brand & Action Colors */
-  --color-primary: 10, 31, 46;
+  --color-primary: #0A1F2E;
   /* Midnight Navy: Professional deep blue for core elements */
-  --color-accent: 0, 166, 181;
+  --color-accent: #00A6B5;
   /* Caribbean Teal: Vibrant cyan for primary actions and links */
-  --color-accent-soft: 77, 188, 201;
+  --color-accent-soft: #4DBCC9;
   /* Sky Blue: Softer teal for borders or secondary details */
 
   /* Fuchsia Highlight Scale */
-  --color-fuchsia: 233, 30, 140;
+  --color-fucsia: #E91E8C;
   /* Vivid Fuchsia: High-energy color for key highlights */
-  --color-fuchsia-light: 255, 105, 180;
+  --color-fucsia-light: #FF4DA6;
   /* Hot Pink: Softened fuchsia for hover states */
-  --color-fuchsia-dark: 199, 21, 133;
+  --color-fucsia-dark: #C71675;
   /* Deep Magenta: Darker tone for emphasis and depth */
 
   /* Typography Colors */
-  --color-text-main: 10, 31, 46;
+  --color-text-main: #0A1F2E;
   /* Deep Navy: High-contrast dark text for readability */
-  --color-text-inverse: 245, 230, 240;
+  --color-text-inverse: #F5E6F0;
   /* Off-White: Light text for use on dark backgrounds */
 
 
@@ -66,18 +66,18 @@
   /*--fs-xs: 0.875rem;*/
 
 
-  --font-main: 'DM Sans', -apple-system, sans-serif;
+  --font-main: 'Outfit', -apple-system, sans-serif;
   --font-code: 'Fira Code', monospace;
 
 
   /* ---- FLUID SPACING SYSTEM ---- */
-  --spacing-xs: clamp(0.5rem, 1vw, 0.75rem);
+  --spacing-xs: 0.5rem;
   /*Extra small gaps: icons, tight labels*/
-  --spacing-sm: clamp(1rem, 2vw, 1.5rem);
+  --spacing-sm: 1rem;
   /*Standard internal padding: buttons, small cards*/
-  --spacing-md: clamp(1.5rem, 4vw, 3rem);
+  --spacing-md: 2rem;
   /*Gaps*/
-  --spacing-lg: clamp(3rem, 8vw, 6rem);
+  --spacing-lg: 4rem;
   /*Vertical padding between major sections*/
   --spacing-xl: 6rem;
   --spacing-2xl: 8rem;
@@ -169,4 +169,106 @@ footer {
   align-items: center;
 
   gap: var(--spacing-md);
+}
+
+
+/* =========================================================
+   HEADER COMPONENT (Arquitectura de 3 Capas Estricta)
+   ========================================================= */
+
+/* LAYER 1: BLOCK 
+   Responsabilidad: Ocupar todo el ancho, fondo y posición.
+*/
+.header__section {
+  border: 2px dotted rgb(0, 126, 6);
+  width: 100%;
+  height: var(--navbar-height);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  background: rgba(var(--color-bg-main), 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid rgb(var(--color-fuchsia));
+}
+
+/* LAYER 2: CONTAINER 
+   Responsabilidad: Centrado y ancho máximo (1200px).
+*/
+.header__container {
+  border: 2px dotted rgb(25, 0, 126);
+  height: 100%;
+  /* Max-width y margin-inline: auto vienen del selector global [class$="__container"] */
+}
+
+/* LAYER 3: CONTENT 
+   Responsabilidad: Distribución de los elementos.
+*/
+.header__content {
+  border: 2px dotted rgb(126, 44, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+/* ---------------------------------------------------------
+   ELEMENTOS INTERNOS
+   --------------------------------------------------------- */
+
+.nav__logo {
+  border: 2px dotted rgb(0, 13, 255);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  background: linear-gradient(135deg, rgb(var(--color-fuchsia)), rgb(var(--color-accent)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav__menu {
+  border: 2px dotted rgb(255, 0, 183);
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-lg);
+}
+
+.nav__list {
+  border: 2px dotted rgb(0, 221, 255);
+  display: flex;
+}
+
+.header__link {
+  border: 2px dotted rgb(255, 0, 43);
+  color: rgb(var(--color-text-main));
+  font-weight: 500;
+
+  position: relative;
+  transition: color var(--transition);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+}
+
+.header__link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(var(--color-fuchsia));
+  transition: width var(--transition);
+}
+
+.header__link:hover {
+  color: rgb(var(--color-fuchsia));
+}
+
+.header__link:hover::after {
+  width: 100%;
 }
