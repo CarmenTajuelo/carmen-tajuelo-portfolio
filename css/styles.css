@@ -12,40 +12,79 @@
    GLOBAL VARIABLES
    --------------------------------------------------------- */
 :root {
-  /* MAIN COLOR PALETTE*/
-  --clr-primary: hsl(220, 90%, 56%);
-  --clr-secondary: hsl(210, 20%, 15%);
-  --clr-accent: hsl(150, 80%, 50%);
+  /* ---- DOCUMENT COLORS ---- */
+  /* Background Colors */
+  --color-bg-main: 245, 230, 240;
+  /* Lavender Mist: Soft and clean main background */
+  --color-bg-secondary: 232, 213, 227;
+  /* Muted Rose: Subtle contrast for sections or cards */
 
-  /* DOCUMENT COLORS */
-  --clr-bg: hsl(0, 0%, 100%);
-  --clr-text: var(--clr-secondary);
-  --clr-white: #ffffff;
+  /* Brand & Action Colors */
+  --color-primary: 10, 31, 46;
+  /* Midnight Navy: Professional deep blue for core elements */
+  --color-accent: 0, 166, 181;
+  /* Caribbean Teal: Vibrant cyan for primary actions and links */
+  --color-accent-soft: 77, 188, 201;
+  /* Sky Blue: Softer teal for borders or secondary details */
 
-  /* RESPONSIVE TYPOGRAPHY*/
+  /* Fuchsia Highlight Scale */
+  --color-fuchsia: 233, 30, 140;
+  /* Vivid Fuchsia: High-energy color for key highlights */
+  --color-fuchsia-light: 255, 105, 180;
+  /* Hot Pink: Softened fuchsia for hover states */
+  --color-fuchsia-dark: 199, 21, 133;
+  /* Deep Magenta: Darker tone for emphasis and depth */
+
+  /* Typography Colors */
+  --color-text-main: 10, 31, 46;
+  /* Deep Navy: High-contrast dark text for readability */
+  --color-text-inverse: 245, 230, 240;
+  /* Off-White: Light text for use on dark backgrounds */
+
+
+  /* ---- RESPONSIVE TYPOGRAPHY ---- */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 3rem;
+  --font-size-5xl: 4.5rem;
+
+
   /*h1 - Hero main titles*/
-  --fs-xl: clamp(2.5rem, 8vw + 1rem, 5rem);
+  /*--fs-xl: clamp(2.5rem, 8vw + 1rem, 5rem);*/
   /*h2 - section headings */
-  --fs-l: clamp(1.75rem, 5vw + 1rem, 3rem);
+  /*--fs-l: clamp(1.75rem, 5vw + 1rem, 3rem);
   /*h3 - subheadings */
-  --fs-m: clamp(1.1rem, 2vw + 1rem, 1.5rem);
+  /*--fs-m: clamp(1.1rem, 2vw + 1rem, 1.5rem);
   /* standard body and paragraphgs */
-  --fs-s: 1rem;
+  /*--fs-s: 1rem;
   /*small Captions or secondary info */
-  --fs-xs: 0.875rem;
+  /*--fs-xs: 0.875rem;*/
 
 
-  /* FLUID SPACING SYSTEM */
-  --space-xs: clamp(0.5rem, 1vw, 0.75rem);
+  --font-main: 'DM Sans', -apple-system, sans-serif;
+  --font-code: 'Fira Code', monospace;
+
+
+  /* ---- FLUID SPACING SYSTEM ---- */
+  --spacing-xs: clamp(0.5rem, 1vw, 0.75rem);
   /*Extra small gaps: icons, tight labels*/
-  --space-s: clamp(1rem, 2vw, 1.5rem);
+  --spacing-sm: clamp(1rem, 2vw, 1.5rem);
   /*Standard internal padding: buttons, small cards*/
-  --space-m: clamp(1.5rem, 4vw, 3rem);
+  --spacing-md: clamp(1.5rem, 4vw, 3rem);
   /*Gaps*/
-  --space-l: clamp(3rem, 8vw, 6rem);
+  --spacing-lg: clamp(3rem, 8vw, 6rem);
   /*Vertical padding between major sections*/
+  --spacing-xl: 6rem;
+  --spacing-2xl: 8rem;
 
-  /* LAYOUT & UI CONSTANTS */
+
+
+  /* ---- LAYOUT & UI CONSTANTS----  */
   --container-max-width: 1200px;
   /*Containers only */
   --navbar-height: 80px;
@@ -53,9 +92,11 @@
   --border-radius: 8px;
   /* Corner roundness */
 
-  /* ANIMATION SETTINGS */
+
+  /* ---- ANIMATION SETTINGS ---- */
   /* Hover States & Simple transitions */
-  --transition-fast: 200ms ease;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --glow: 0 0 20px rgba(233, 30, 140, 0.3);
 
 }
 
@@ -63,21 +104,26 @@
    GLOBAL STYLES
    --------------------------------------------------------- */
 body {
-  font-size: var(--fs-s);
-  color: var(--clr-text);
+  font-family: var(--font-main);
+  font-size: var(--font-size-base);
+  background-color: rgb(var(--color-bg-main));
+  color: rgb(var(--color-text-main));
   line-height: 1.6;
 }
 
 h1 {
-  font-size: var(--fs-xl);
+  font-size: var(--font-size-5xl);
+  line-height: 1.1;
 }
 
 h2 {
-  font-size: var(--fs-l);
+  font-size: var(--font-size-4xl);
+  line-height: 1.2;
 }
 
 h3 {
-  font-size: var(--fs-m);
+  font-size: var(--font-size-2xl);
+  line-height: 1.3;
 }
 
 
@@ -94,12 +140,12 @@ header {
 }
 
 section {
-  padding-block: var(--space-l);
+  padding-block: var(--spacing-lg);
   width: 100%;
 }
 
 footer {
-  padding-block: var(--space-m);
+  padding-block: var(--spacing-md);
   width: 100%;
 }
 
@@ -111,7 +157,7 @@ footer {
 [class$="__container"] {
   max-width: var(--container-max-width);
   margin-inline: auto;
-  padding-inline: var(--space-s);
+  padding-inline: var(--spacing-sm);
 }
 
 /* LAYER 3: CONTENT / AREAS
@@ -121,6 +167,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  gap: var(--space-m);
+
+  gap: var(--spacing-md);
 }
