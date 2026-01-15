@@ -215,7 +215,6 @@ footer {
   padding: var(--spacing-sm) var(--spacing-md);
 
   border: 2px solid rgb(var(--color-fuchsia));
-  /*box-shadow: 0 8px 32px rgba(233, 30, 140, 0.2);*/
   box-shadow: 0 0 15px rgba(233, 30, 140, 0.4);
   animation: glow-pulse 3s infinite ease-in-out;
   border: 1px solid rgba(233, 30, 140, 0.3);
@@ -288,6 +287,8 @@ footer {
   animation: fadeInDown 0.5s ease forwards;
 }
 
+
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -313,14 +314,17 @@ footer {
   font-weight: 600;
   font-size: var(--font-size-sm);
   position: relative;
-  transition: color var(--transition);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 0.5rem 1rem;
   border-radius: 50px;
 }
 
 .nav__link:hover {
   color: var(--color-fucsia);
-  background: rgba(233, 30, 140, 0.1);
+  background: rgba(233, 30, 140, 0.8);
+  color: #fff;
+  transform: translateX(10px);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .nav__actions {
