@@ -187,8 +187,6 @@ footer {
 }*/
 
 .header__section {
-  border: 3px dotted red;
-
   width: 100%;
 
   position: fixed;
@@ -203,10 +201,7 @@ footer {
 
 }
 
-.header__container {
-  border: 3px dotted rgb(0, 85, 255);
-
-}
+.header__container {}
 
 .header__content {
   display: flex;
@@ -220,10 +215,41 @@ footer {
   padding: var(--spacing-sm) var(--spacing-md);
 
   border: 2px solid rgb(var(--color-fuchsia));
-  box-shadow: 0 8px 32px rgba(233, 30, 140, 0.2);
+  /*box-shadow: 0 8px 32px rgba(233, 30, 140, 0.2);*/
+  box-shadow: 0 0 15px rgba(233, 30, 140, 0.4);
+  animation: glow-pulse 3s infinite ease-in-out;
+  border: 1px solid rgba(233, 30, 140, 0.3);
 
   pointer-events: auto;
 }
+
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(233, 30, 140, 0.4),
+      0 0 20px rgba(233, 30, 140, 0.1);
+  }
+
+  50% {
+    /* El brillo se expande y se vuelve un poco más intenso */
+    box-shadow: 0 0 20px rgba(233, 30, 140, 0.6),
+      0 0 40px rgba(233, 30, 140, 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgba(233, 30, 140, 0.4),
+      0 0 20px rgba(233, 30, 140, 0.1);
+  }
+}
+
+.header__content:hover {
+  animation-play-state: paused;
+  /* La pulsación se detiene */
+  box-shadow: 0 0 25px rgba(233, 30, 140, 0.8);
+  /* Brillo intenso fijo */
+  border-color: var(--color-fucsia);
+  transition: all 0.5s ease;
+}
+
 
 .nav__logo {
   font-size: var(--font-size-xl);
