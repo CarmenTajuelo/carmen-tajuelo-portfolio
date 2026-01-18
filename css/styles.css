@@ -94,7 +94,6 @@ html {
   /* Header Content area */
   --navbar-height: 80px;
 
-:root {
   /* Fixed values for consistent corners */
   --border-radius-sm: 0.5rem;   /* 8px */
   --border-radius-md: 1rem;     /* 16px */
@@ -239,7 +238,7 @@ footer {
 
   background: rgba(10, 31, 46, 0.9);
   backdrop-filter: blur(20px);
-  border-radius: 100px;
+  border-radius: var(--border-radius-pill);
 
   border: 2px solid var(--color-fucsia);
   box-shadow: 0 0 15px rgba(233, 30, 140, 0.4);
@@ -389,7 +388,7 @@ footer {
 }
 
 .hero__photo {
-  border-radius: var(--border-radius-full);
+  border-radius: var(--border-radius-circle);
 }
 
 
