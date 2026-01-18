@@ -201,7 +201,10 @@ footer {
 
 }
 
-.header__container {}
+.header__container {
+  max-width: 1200px;
+  margin: auto;
+}
 
 .header__content {
   display: flex;
