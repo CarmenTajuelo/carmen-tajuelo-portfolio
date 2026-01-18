@@ -122,6 +122,7 @@ body {
   background-color: var(--color-bg-main);
   color: var(--color-text-main);
   line-height: 1.6;
+  margin-top: var(--navbar-height);
 }
 
 h1 {
