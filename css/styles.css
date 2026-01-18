@@ -18,32 +18,36 @@ html {
 :root {
   /* ---- DOCUMENT COLORS ---- */
   /* Background Colors */
-  --color-bg-main: #F5E6F0;
   /* Lavender Mist: Soft and clean main background */
-  --color-bg-secondary: #E8D5E3;
+  --color-bg-main: #F5E6F0;
   /* Muted Rose: Subtle contrast for sections or cards */
+  --color-bg-secondary: #E8D5E3;
+
 
   /* Brand & Action Colors */
-  --color-primary: #0A1F2E;
   /* Midnight Navy: Professional deep blue for core elements */
-  --color-accent: #00A6B5;
+  --color-primary: #0A1F2E;
   /* Caribbean Teal: Vibrant cyan for primary actions and links */
-  --color-accent-soft: #4DBCC9;
+  --color-accent: #00A6B5;
   /* Sky Blue: Softer teal for borders or secondary details */
+  --color-accent-soft: #4DBCC9;
+
 
   /* Fucsia Highlight Scale */
-  --color-fucsia: #E91E8C;
   /* Vivid Fucsia: High-energy color for key highlights */
-  --color-fucsia-light: #FF4DA6;
+  --color-fucsia: #E91E8C;
   /* Hot Pink: Softened fucsia for hover states */
-  --color-fucsia-dark: #C71675;
+  --color-fucsia-light: #FF4DA6;
   /* Deep Magenta: Darker tone for emphasis and depth */
+  --color-fucsia-dark: #C71675;
+
 
   /* Typography Colors */
-  --color-text-main: #0A1F2E;
   /* Deep Navy: High-contrast dark text for readability */
-  --color-text-inverse: #F5E6F0;
+  --color-text-main: #0A1F2E;
   /* Off-White: Light text for use on dark backgrounds */
+  --color-text-inverse: #F5E6F0;
+
 
 
   /* ---- RESPONSIVE TYPOGRAPHY ---- */
@@ -58,31 +62,19 @@ html {
   --font-size-5xl: 4.5rem;
 
 
-  /*h1 - Hero main titles*/
-  /*--fs-xl: clamp(2.5rem, 8vw + 1rem, 5rem);*/
-  /*h2 - section headings */
-  /*--fs-l: clamp(1.75rem, 5vw + 1rem, 3rem);
-  /*h3 - subheadings */
-  /*--fs-m: clamp(1.1rem, 2vw + 1rem, 1.5rem);
-  /* standard body and paragraphgs */
-  /*--fs-s: 1rem;
-  /*small Captions or secondary info */
-  /*--fs-xs: 0.875rem;*/
-
-
   --font-main: 'Outfit', -apple-system, sans-serif;
   --font-code: 'Fira Code', monospace;
 
 
   /* ---- FLUID SPACING SYSTEM ---- */
-  --spacing-xs: 0.5rem;
   /*Extra small gaps: icons, tight labels*/
-  --spacing-sm: 1rem;
+  --spacing-xs: 0.5rem;
   /*Standard internal padding: buttons, small cards*/
-  --spacing-md: 2rem;
+  --spacing-sm: 1rem;
   /*Gaps*/
-  --spacing-lg: 4rem;
+  --spacing-md: 2rem;
   /*Vertical padding between major sections*/
+  --spacing-lg: 4rem;
   --spacing-xl: 6rem;
   --spacing-2xl: 8rem;
 
@@ -95,19 +87,21 @@ html {
   --navbar-height: 80px;
 
   /* Fixed values for consistent corners */
-  --border-radius-sm: 0.5rem;   /* 8px */
-  --border-radius-md: 1rem;     /* 16px */
-  --border-radius-lg: 1.5rem;   /* 24px */
-  --border-radius-xl: 3.125rem; /* 50px */
-  
+  /* 8px */
+  --border-radius-sm: 0.5rem;
+  /* 16px */
+  --border-radius-md: 1rem;
+  /* 24px */
+  --border-radius-lg: 1.5rem;
+  /* 50px */
+  --border-radius-xl: 3.125rem;
+
+
   /* Variable for shapes */
-  --border-radius-pill: 9999px; /* For pill-shaped navbars and buttons */
-  --border-radius-circle: 50%;  /* Only for perfect circles (like profile photos) */
-}
-
-
-
-
+  /* For pill-shaped navbars and buttons */
+  --border-radius-pill: 9999px;
+  /* Only for perfect circles (like profile photos) */
+  --border-radius-circle: 50%;
 
 
 
@@ -160,9 +154,8 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  
-  /* Añade esto para asegurar que el color del H2 no gane */
-  color: transparent; 
+
+  color: transparent;
   display: inline-block;
 }
 
@@ -173,10 +166,6 @@ a {
 /* LAYER 1: BLOCK (The Section)
    Defines the semantic context and vertical breathing room
 */
-/*header {
-  height: var(--navbar-height);
-  width: 100%;
-}*/
 
 section {
   padding-block: var(--spacing-lg);
@@ -193,22 +182,6 @@ footer {
 /* LAYER 2: CONTAINER
    Defines max-width and keeps content centered
 */
-/*[class$="__container"] {
-  max-width: var(--container-max-width);
-  margin-inline: auto;
-  padding-inline: var(--spacing-sm);
-}*/
-
-/* LAYER 3: CONTENT / AREAS
-   Handles internal layout distribution
-*/
-/*[class$="__content"] {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: var(--spacing-md);
-}*/
 
 .header__section {
   width: 100%;
@@ -255,7 +228,6 @@ footer {
   }
 
   50% {
-    /* El brillo se expande y se vuelve un poco más intenso */
     box-shadow: 0 0 20px rgba(233, 30, 140, 0.6),
       0 0 40px rgba(233, 30, 140, 0.2);
   }
@@ -376,7 +348,7 @@ footer {
 }
 
 .hero__content {
- border: 3px dotted rgb(0, 255, 47);
+  border: 3px dotted rgb(0, 255, 47);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -391,8 +363,9 @@ footer {
   border-radius: var(--border-radius-circle);
 }
 
-
-/* Tablet - 768px */
+/* ======================================================== */
+/* ==================== Tablet - 768px ==================== */
+/* ======================================================== */
 @media (min-width: 768px) {
   .nav__menu.open {
     background: linear-gradient(145deg, rgba(199, 22, 117, 0.95) 0%, rgba(145, 12, 84, 0.95) 100%);
@@ -404,7 +377,9 @@ footer {
   }
 }
 
-/* Desktop - 1024px */
+/* ======================================================== */
+/* ==================== Desktop - 1024px ================== */
+/* ======================================================== */
 @media (min-width: 1024px) {
   .nav__menu {
     display: flex;
