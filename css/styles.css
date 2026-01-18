@@ -94,11 +94,17 @@ html {
   /* Header Content area */
   --navbar-height: 80px;
 
-  --border-radius-sm: 8px;
-  --border-radius-md: 16px;
-  --border-radius-lg: 24px;
-  --border-radius-xl: 50px;
-  --border-radius-full: 100px;
+:root {
+  /* Fixed values for consistent corners */
+  --border-radius-sm: 0.5rem;   /* 8px */
+  --border-radius-md: 1rem;     /* 16px */
+  --border-radius-lg: 1.5rem;   /* 24px */
+  --border-radius-xl: 3.125rem; /* 50px */
+  
+  /* Variable for shapes */
+  --border-radius-pill: 9999px; /* For pill-shaped navbars and buttons */
+  --border-radius-circle: 50%;  /* Only for perfect circles (like profile photos) */
+}
 
 
 
@@ -150,7 +156,16 @@ a {
   color: inherit;
 }
 
-
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-fucsia), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  /* Añade esto para asegurar que el color del H2 no gane */
+  color: transparent; 
+  display: inline-block;
+}
 
 /* ---------------------------------------------------------
    ARCHITECTURE: 3-LAYER SYSTEM
@@ -224,7 +239,7 @@ footer {
 
   background: rgba(10, 31, 46, 0.9);
   backdrop-filter: blur(20px);
-  border-radius: var(--border-radius-full);
+  border-radius: 100px;
 
   border: 2px solid var(--color-fucsia);
   box-shadow: 0 0 15px rgba(233, 30, 140, 0.4);
@@ -324,7 +339,7 @@ footer {
   position: relative;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 0.5rem 1rem;
-  border-radius: var(--border-radius-xl);
+  border-radius: var(--border-radius-pill);
 }
 
 .nav__link:hover {
@@ -348,6 +363,33 @@ footer {
   color: var(--color-text-inverse);
   cursor: pointer;
   padding: 0.5rem;
+}
+
+
+/* ==== HERO SECTION ==== */
+.hero__section {
+  width: 100%;
+}
+
+.hero__container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero__content {
+ border: 3px dotted rgb(0, 255, 47);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  text-align: center;
+  padding: var(--spacing-lg);
+
+}
+
+.hero__photo {
+  border-radius: var(--border-radius-full);
 }
 
 
