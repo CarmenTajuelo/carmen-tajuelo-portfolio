@@ -367,6 +367,44 @@ footer {
 /* ==========================================
        SECTION BASE
        ========================================== */
+.section {
+  border: 3px dotted rgb(17, 0, 255);
+  padding: var(--spacing-2xl) var(--spacing-md);
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  border: 3px dotted rgb(181, 72, 83);
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.content {
+  border: 3px dotted rgb(0, 255, 229);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  gap: var(--spacing-md);
+
+  text-align: center;
+}
+
+/*.section__label {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(135deg, var(--color-fuchsia), var(--color-accent));
+  color: white;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  margin-bottom: var(--spacing-sm);
+}*/
 
 .section__label {
   font-family: var(--font-code);
@@ -377,31 +415,29 @@ footer {
   order: -2;
 }
 
+.section__title {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.section__description {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-main);
+  opacity: 0.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
 
 /* PROJECTS */
-.projects__section {
-  border: 3px dotted rgb(0, 255, 47);
-  width: 100%;
-}
 
-.projects__container {
-  border: 3px dotted rgb(255, 247, 0);
-  max-width: 1200px;
-  margin: auto;
-}
-
-.projects__content {
-  border: 3px dotted rgb(0, 255, 47);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: var(--spacing-md);
-}
 
 
 /* ==========================================
-       PORTFOLIO - CARDS WITH FUCSIA ACCENTS
+       PORTFOLIO - CARDS WITH FUCHSIA ACCENTS
        ========================================== */
 
 .portfolio-grid {
@@ -426,14 +462,14 @@ footer {
   left: 0;
   right: 0;
   height: 6px;
-  background: linear-gradient(90deg, var(--color-fucsia), var(--color-accent));
+  background: linear-gradient(90deg, var(--color-fuchsia), var(--color-accent));
   transform: scaleX(0);
   transition: transform var(--transition);
 }
 
 .project-card:hover {
   transform: translateY(-12px);
-  border-color: var(--color-fucsia-light);
+  border-color: var(--color-fuchsia-light);
   box-shadow: 0 20px 60px rgba(233, 30, 140, 0.2);
 }
 
@@ -464,7 +500,7 @@ footer {
   top: var(--spacing-sm);
   right: var(--spacing-sm);
   padding: 0.5rem 1rem;
-  background: var(--color-fucsia);
+  background: var(--color-fuchsia);
   color: white;
   font-size: var(--font-size-xs);
   font-weight: 700;
@@ -500,7 +536,7 @@ footer {
 .tag {
   padding: 0.375rem 1rem;
   background: linear-gradient(135deg, rgba(233, 30, 140, 0.1), rgba(0, 166, 181, 0.1));
-  color: var(--color-fucsia-dark);
+  color: var(--color-fuchsia-dark);
   font-size: var(--font-size-xs);
   font-weight: 600;
   border-radius: 50px;
@@ -511,7 +547,7 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--color-fucsia);
+  color: var(--color-fuchsia);
   font-weight: 700;
   transition: gap var(--transition);
 }
@@ -523,47 +559,14 @@ footer {
 
 
 /* STACK */
-.stack__section {
-  border: 3px dotted rgb(0, 60, 255);
-  width: 100%;
-}
-
-.stack__container {
-  border: 3px dotted rgb(0, 255, 47);
-  max-width: 1200px;
-  margin: auto;
-}
-
-.stack__content {
-  border: 3px dotted rgb(0, 60, 255);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: var(--spacing-md);
-}
 
 
 /* ABOUT */
-.about__section {
-  border: 3px dotted rgb(255, 0, 144);
-  width: 100%;
-}
 
-.about__container {
-  border: 3px dotted rgb(0, 60, 255);
-  max-width: 1200px;
-  margin: auto;
-}
 
-.about__content {
-  border: 3px dotted rgb(255, 0, 195);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: var(--spacing-md);
-}
+
+
+
 
 /* ======================================================== */
 /* ==================== Tablet - 768px ==================== */
