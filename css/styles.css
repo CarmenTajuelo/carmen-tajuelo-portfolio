@@ -364,7 +364,9 @@ footer {
   border-radius: var(--border-radius-circle);
 }
 
-
+/* ==========================================
+       SECTION BASE
+       ========================================== */
 
 .section__label {
   font-family: var(--font-code);
@@ -396,6 +398,128 @@ footer {
   align-items: center;
   gap: var(--spacing-md);
 }
+
+
+/* ==========================================
+       PORTFOLIO - CARDS WITH FUCSIA ACCENTS
+       ========================================== */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.project-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all var(--transition);
+  border: 3px solid transparent;
+  position: relative;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--color-fucsia), var(--color-accent));
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
+  border-color: var(--color-fucsia-light);
+  box-shadow: 0 20px 60px rgba(233, 30, 140, 0.2);
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+.project-card__image {
+  height: 250px;
+  background: var(--color-bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.project-card:hover .project-card__image img {
+  transform: scale(1.1);
+}
+
+.project-card__badge {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  padding: 0.5rem 1rem;
+  background: var(--color-fucsia);
+  color: white;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.project-card__content {
+  padding: var(--spacing-md);
+}
+
+.project-card__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.project-card__description {
+  color: var(--color-text-main);
+  opacity: 0.8;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+.tag {
+  padding: 0.375rem 1rem;
+  background: linear-gradient(135deg, rgba(233, 30, 140, 0.1), rgba(0, 166, 181, 0.1));
+  color: var(--color-fucsia-dark);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid rgba(233, 30, 140, 0.2);
+}
+
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-fucsia);
+  font-weight: 700;
+  transition: gap var(--transition);
+}
+
+.project-card__link:hover {
+  gap: 1rem;
+}
+
 
 
 /* STACK */
@@ -453,6 +577,13 @@ footer {
   .nav__list {
     gap: var(--spacing-sm);
   }
+
+
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
 
 /* ======================================================== */
@@ -474,4 +605,11 @@ footer {
   .nav__actions {
     display: none;
   }
+
+
+
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
 }
