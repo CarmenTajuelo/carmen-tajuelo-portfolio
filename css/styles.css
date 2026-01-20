@@ -369,7 +369,7 @@ footer {
        ========================================== */
 .section {
   border: 3px dotted rgb(17, 0, 255);
-  padding: var(--spacing-2xl) var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-md);
   position: relative;
   width: 100%;
 }
@@ -441,9 +441,14 @@ footer {
        ========================================== */
 
 .portfolio-grid {
-  display: grid;
+  /*display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: var(--spacing-lg);
+  gap: var(--spacing-lg);*/
+
+    border: 3px dotted peru;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
 }
 
 .project-card {
@@ -453,6 +458,7 @@ footer {
   transition: all var(--transition);
   border: 3px solid transparent;
   position: relative;
+  flex: 1;
 }
 
 .project-card::before {
@@ -566,7 +572,7 @@ footer {
 
 .tools-section {
   border: 3px dotted rgb(30, 0, 255);
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
   width: 100%;;
 }
 
@@ -610,8 +616,9 @@ footer {
 }
 
 .tool-card:hover {
-  border-color: var(--color-accent);
-  transform: translateY(-4px);
+  transform: translateY(-12px);
+  border-color: var(--color-fuchsia-light);
+  box-shadow: 0 20px 60px rgba(233, 30, 140, 0.2);
 }
 
 .tool-card__name {
@@ -839,7 +846,8 @@ footer {
 
 
   .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+    flex-direction: row;
   }
 
   .tools-grid {
