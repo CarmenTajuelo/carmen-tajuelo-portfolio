@@ -27,8 +27,10 @@ html {
   /* Brand & Action Colors */
   /* Midnight Navy: Professional deep blue for core elements */
   --color-primary: #0A1F2E;
+
   /* Caribbean Teal: Vibrant cyan for primary actions and links */
   --color-accent: #00A6B5;
+
   /* Sky Blue: Softer teal for borders or secondary details */
   --color-accent-soft: #4DBCC9;
 
@@ -47,6 +49,62 @@ html {
   --color-text-main: #0A1F2E;
   /* Off-White: Light text for use on dark backgrounds */
   --color-text-inverse: #F5E6F0;
+
+
+
+
+     /* ---- DOCUMENT COLORS ---- */
+     /* Background Colors */
+     /* Soft and clean main background */
+     --_lavender-mist: #f5e6f0;
+     --color-bg-main-rgb: 245, 230, 240;
+     --color-bg-main: rgb(var(--color-bg-main-rgb));
+
+     /* Subtle contrast for sections or cards */
+     --_rose-muted: #E8D5E3;
+     --color-bg-secondary-rgb: 232, 213, 227;
+     --color-bg-secondary: rgb(var(--color-bg-secondary-rgb));
+
+
+     /* Brand */
+     /*Primary Color: Core elements */
+     --_midnight-navy: #0A1F2E;
+     --color-primary-rgb: 10, 31, 46;
+     --color-primary: rgb(var(--color-primary-rgb));
+     --color-primary-muted: rgba(var(--color-primary-rgb), 0.7);
+     --color-primary-subtle: rgba(var(--color-primary-rgb), 0.1);
+
+     /*Highlights: Key elements: notifications, new badge, key word, bold workds, menu active status*/
+     --_vivid-fuchsia: #E91E8C;
+     --color-highlight-rgb: 233, 30, 140;
+     --color-highlight: rgb(var(--color-highlight-rgb));
+     --color-highlight-subtle: rgba(var(--color-highlight-rgb), 0.1);
+
+     /* Dark Highlight: Darker tone for emphasis and depth */
+     --_dark-magenta: #C71675;
+     --color-highlight-dark-rgb: 199, 22, 117;
+     --color-highlight-dark: rgb(var(--color-highlight-dark-rgb));
+
+     /*Action: Interactive elements: buttons, links, social icons, checkboxes.*/
+     --_caribbean-teal: #00A6B5;
+     --color-action-rgb: 0, 166, 181;
+     --color-action: rgb(var(--color-action-rgb));
+
+     /* Subtle hierarchy details: border line, decorative point, card border, tag...*/
+     --_sky-blue: #4dbcc9;
+     --color-accent-rgb: 77, 188, 201;
+     --color-accent: rgb(var(--color-accent-rgb));
+
+
+     /* Typography Colors */
+     /* High-contrast dark text for readability */
+     --_midnight-navy: #0A1F2E;
+     --color-text-main: var(--color-primary);
+     --color-text-muted: var(--color-primary-muted);
+
+     /* Off-White: Light text for use on dark backgrounds */
+     --_lavender-mist: #f5e6f0;
+     --color-text-inverse: var(--color-bg-main);
 
 
 
