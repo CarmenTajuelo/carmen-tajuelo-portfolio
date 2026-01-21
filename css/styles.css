@@ -468,7 +468,7 @@ pre {
   font-size: var(--font-size-sm);
   position: relative;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: var(--space-xs) var(--space-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--border-radius-pill);
 }
 
@@ -482,7 +482,7 @@ pre {
 .nav__actions {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--spacing-sm);
 }
 
 .nav__hamburger {
