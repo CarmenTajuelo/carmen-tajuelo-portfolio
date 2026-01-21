@@ -447,8 +447,12 @@ pre {
   animation: fadeInDown 0.5s ease forwards;
 }
 
+.nav__menu.open .nav__link:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
 .nav__list {
-  border: 3px dotted red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -457,12 +461,10 @@ pre {
 }
 
 .nav__list li {
-  border: 3px dotted rgb(0, 255, 64);
   display: flex;
 }
 
 .nav__link {
-  border: 3px dotted rgb(30, 0, 255);
   color: var(--color-text-inverse);
   font-weight: var(--fw-semibold);
   font-size: var(--font-size-sm);
@@ -473,9 +475,9 @@ pre {
 }
 
 .nav__link:hover {
-  color: var(--color-highlight);
-  background: var(--color-highlight-subtle);
-  transform: translateX(10px);
+  color: white;
+  background: var(--color-highlight);
+  /*transform: translateX(10px);*/
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
