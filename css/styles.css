@@ -1,6 +1,6 @@
-/* ---------------------------------------------------------
-   GLOBAL VARIABLES
-   --------------------------------------------------------- */
+/* ==========================================
+       GLOBAL VARIABLES
+       ========================================== */
 :root {
 
   /* ----  COLORS ---- */
@@ -169,9 +169,9 @@
 }
 
 
-/* ---------------------------------------------------------
-   RESET STYLE
-   --------------------------------------------------------- */
+/* ==========================================
+       RESET STYLE
+       ========================================== */
 
 /* Box sizing rules */
 *,
@@ -255,9 +255,9 @@ select {
 }
 
 
-/* ---------------------------------------------------------
-   GLOBAL STYLES
-   --------------------------------------------------------- */
+/* ==========================================
+       GLOBAL STYLES
+       ========================================== */
 body {
   font-family: var(--font-main);
   font-size: var(--font-size-base);
@@ -328,32 +328,6 @@ pre {
   font-size: var(--font-size-sm);
 }
 
-
-
-/* Utility Containers */
-.container {
-  max-width: var(--container-max-width);
-  margin-inline: auto;
-  padding-inline: var(--container-gutter);
-}
-
-
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-
-.text-gradient {
-  background: linear-gradient(135deg, var(--color-highlight), var(--color-action));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-
-  color: transparent;
-  display: inline-block;
-}
 
 /* ---------------------------------------------------------
    ARCHITECTURE: 3-LAYER SYSTEM
@@ -925,4 +899,57 @@ img {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+/* ==========================================
+    UTILITIES
+       ========================================== */
+
+/* Text Gradients */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-highlight), var(--color-action));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+
+/* Visibility & Layout Helpers */
+.sr-only {
+  /* Screen readers only - accessibility */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Text alignment overrides */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* Display helpers */
+.hidden {
+  display: none !important;
+}
+
+/* Weight modifiers */
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium);
 }
