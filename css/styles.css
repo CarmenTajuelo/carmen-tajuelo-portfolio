@@ -196,9 +196,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements */
-ul[role='list'],
-ol[role='list'],
-li {
+ul,
+ol {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -363,6 +362,7 @@ pre {
    NAVBAR
    --------------------------------------------------------- */
 .nav-block {
+
   width: 100%;
 
   position: fixed;
@@ -377,6 +377,7 @@ pre {
 }
 
 .nav-content {
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -426,6 +427,8 @@ pre {
 
 .nav__menu.open {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   top: 100%;
   left: 0;
@@ -445,6 +448,7 @@ pre {
 }
 
 .nav__list {
+  border: 3px dotted red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -452,7 +456,13 @@ pre {
   gap: var(--spacing-md);
 }
 
+.nav__list li {
+  border: 3px dotted rgb(0, 255, 64);
+  display: flex;
+}
+
 .nav__link {
+  border: 3px dotted rgb(30, 0, 255);
   color: var(--color-text-inverse);
   font-weight: var(--fw-semibold);
   font-size: var(--font-size-sm);
@@ -464,8 +474,7 @@ pre {
 
 .nav__link:hover {
   color: var(--color-highlight);
-  background: rgba(var(--color-highlight, 0.8));
-  color: #fff;
+  background: var(--color-highlight-subtle);
   transform: translateX(10px);
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
@@ -486,21 +495,9 @@ pre {
   line-height: 1;
 }
 
-@media (min-width: 768px) {
-  .nav__menu.open {
-    background: linear-gradient(145deg, rgba(199, 22, 117, 0.95) 0%, rgba(145, 12, 84, 0.95) 100%);
-    padding: var(--spacing-md) 0;
-  }
-
-  .nav__list {
-    gap: var(--spacing-sm);
-  }
-}
-
 @media (min-width: 1024px) {
   .nav__menu {
     display: flex;
-
     padding: 0;
     position: static;
   }
