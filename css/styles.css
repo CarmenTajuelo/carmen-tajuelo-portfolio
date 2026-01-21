@@ -1,59 +1,9 @@
 /* ---------------------------------------------------------
-   RESET STYLE
-   --------------------------------------------------------- */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* ---------------------------------------------------------
    GLOBAL VARIABLES
    --------------------------------------------------------- */
 :root {
-  /* ---- DOCUMENT COLORS ---- */
-  /* Background Colors */
-  /* Lavender Mist: Soft and clean main background */
-  /* --color-bg-main: #F5E6F0;
-  /* Muted Rose: Subtle contrast for sections or cards */
-  /*--color-bg-secondary: #E8D5E3;
 
-
-  /* Brand & Action Colors */
-  /* Midnight Navy: Professional deep blue for core elements */
-  /*--color-primary: #0A1F2E;
-
-  /* Caribbean Teal: Vibrant cyan for primary actions and links */
-  /*--color-accent: #00A6B5;
-
-  /* Sky Blue: Softer teal for borders or secondary details */
-  /*--color-accent-soft: #4DBCC9;
-
-
-  /* Fuchsia Highlight Scale */
-  /* Vivid Fuchsia: High-energy color for key highlights */
-  /*--color-fuchsia: #E91E8C;
-  /* Hot Pink: Softened fuchsia for hover states */
-  /*--color-fuchsia-light: #FF4DA6;
-  /* Deep Magenta: Darker tone for emphasis and depth */
-  /* --color-fuchsia-dark: #C71675;
-
-
-  /* Typography Colors */
-  /* Deep Navy: High-contrast dark text for readability */
-  /*--color-text-main: #0A1F2E;
-  /* Off-White: Light text for use on dark backgrounds */
-  /*--color-text-inverse: #F5E6F0;
-
-
-
-
-     /* ---- DOCUMENT COLORS ---- */
+  /* ----  COLORS ---- */
   /* Background Colors */
   /* Soft and clean main background */
   --_lavender-mist: #f5e6f0;
@@ -107,69 +57,203 @@ html {
   --color-text-inverse: var(--color-bg-main);
 
 
-
   /* ---- RESPONSIVE TYPOGRAPHY ---- */
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
+  /* HEADINGS & HIERARCHY (Fluid values) */
+  /* H1: Main Heading or Hero Section (40>80px) */
+  --font-size-5xl: clamp(2.5rem, 8vw + 1rem, 5rem);
+  /* Page Titles (32>56px) */
+  --font-size-4xl: clamp(2rem, 6vw + 1rem, 3.5rem);
+  /* H2: Main section titles: About Me, Services (24>40px) */
+  --font-size-3xl: clamp(1.5rem, 4vw + 1rem, 2.5rem);
+  /* H3: Secondary sections or project cards titles (20>24px) */
+  --font-size-2xl: clamp(1.25rem, 2vw + 1rem, 1.5rem);
+  /* H4: Card subtitles (18>20px) */
+  --font-size-xl: clamp(1.125rem, 1.5vw + 1rem, 1.25rem);
+
+  /* BODY TEXT (Fixed values) */
+  /* 18px: Introductions, featured article text */
   --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 2rem;
-  --font-size-4xl: 3rem;
-  --font-size-5xl: 4.5rem;
+  /* 16px: Main body text, standard legibility */
+  --font-size-base: 1rem;
+  /* 14px: Secondary text, tags, placeholders */
+  --font-size-sm: 0.875rem;
+  /* 12px: Footnotes, metadata, image captions */
+  --font-size-xs: 0.75rem;
 
 
-  --font-main: 'Outfit', -apple-system, sans-serif;
-  --font-code: 'Fira Code', monospace;
+  /* ---- TYPOGRAPHY ATTRIBUTES ---- */
+  /* Line Heights */
+  /* Used for headings to keep them compact when they wrap */
+  --lh-tight: 1.1;
+  /* Standard reading height for body text (Golden ratio approximation) */
+  --lh-base: 1.5;
+  /* Extra breathing room for small or metadata text */
+  --lh-loose: 1.7;
+
+  /* Font Weights */
+  /* Light: Used for large hero text or thin display titles for a sophisticated look */
+  --fw-light: 300;
+  /* Regular: The default weight for all body text and paragraphs to ensure maximum readability */
+  --fw-regular: 400;
+  /* Medium: Used for emphasized text within paragraphs or medium-sized UI elements like buttons */
+  --fw-medium: 500;
+  /* Semibold: Ideal for subheadings (H2, H3) and card titles to provide clear hierarchy */
+  --fw-semibold: 600;
+  /* Bold: Reserved for the main heading (H1), strong emphasis, or critical calls to action */
+  --fw-bold: 700;
+
+  /* Font Families */
+  /* Primary font: Modern, geometric, and highly legible */
+  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Monospace font: Used for code snippets, numbers, or technical data */
+  --font-code: 'Fira Code', 'Cascadia Code', 'Source Code Pro', monospace;
 
 
 
   /* ---- FLUID SPACING SYSTEM ---- */
-  /*Extra small gaps: icons, tight labels*/
-  --spacing-xs: 0.5rem;
-  /*Standard internal padding: buttons, small cards*/
+  /* 2XL: Maximum separation for high-end layouts (Fluid: 80px > 128px) */
+  --spacing-2xl: clamp(5rem, 10vw + 1rem, 8rem);
+  /* XL: Large vertical breathing room for Hero sections (Fluid: 64px > 96px) */
+  --spacing-xl: clamp(4rem, 8vw + 1rem, 6rem);
+  /* LG: Padding between major sections (Fluid: 40px > 64px) */
+  --spacing-lg: clamp(2.5rem, 5vw + 1rem, 4rem);
+  /* MD: General gaps between elements or small section padding (Fluid: 24px > 32px) */
+  --spacing-md: clamp(1.5rem, 2vw + 1rem, 2rem);
+  /* SM: Standard internal padding for buttons and small cards (Fixed 16px) */
   --spacing-sm: 1rem;
-  /*Gaps*/
-  --spacing-md: 2rem;
-  /*Vertical padding between major sections*/
-  --spacing-lg: 4rem;
-  --spacing-xl: 6rem;
-  --spacing-2xl: 8rem;
+  /* XS: Extra small gaps for icons, tight labels, or small UI details (Fixed 8px) */
+  --spacing-xs: 0.5rem;
 
 
-
-  /* ---- LAYOUT & UI CONSTANTS----  */
-  /*Containers only */
+  /* ---- LAYOUT & UI CONSTANTS ---- */
+  /* Container constraints */
   --container-max-width: 1200px;
-  /* Header Content area */
+  /* Side padding for fluid containers on mobile */
+  --container-gutter: var(--spacing-md);
+
+  /* Header configuration */
   --navbar-height: 80px;
 
-  /* Fixed values for consistent corners */
-  /* 8px */
+  /* Corners */
+  /* 8px: Input fields, small buttons */
   --border-radius-sm: 0.5rem;
-  /* 16px */
+  /* 16px: Cards, modal windows */
   --border-radius-md: 1rem;
-  /* 24px */
+  /* 24px: Section backgrounds, large banners */
   --border-radius-lg: 1.5rem;
-  /* 50px */
+  /* 50px: Featured elements */
   --border-radius-xl: 3.125rem;
 
 
-  /* Variable for shapes */
+  /* Shape utility variables */
   /* For pill-shaped navbars and buttons */
   --border-radius-pill: 9999px;
-  /* Only for perfect circles (like profile photos) */
+  /* For perfect circles (e.g., profile photos) */
   --border-radius-circle: 50%;
 
 
+  /* ---- ANIMATION & EFFECTS ---- */
+  /* Standard transition for hover states and UI interactions */
+  --transition-duration: 0.3s;
+  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: var(--transition-duration) var(--transition-timing);
 
-  /* ---- ANIMATION SETTINGS ---- */
-  /* Hover States & Simple transitions */
-  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --glow: 0 0 20px rgba(233, 30, 140, 0.3);
+  /* Brand Glow: Uses the highlight-rgb variable for consistency */
+  /* 0 0 20px rgba(fuchsia, 0.3) */
+  --glow: 0 0 20px rgba(var(--color-highlight-rgb), 0.3);
+
+  /* Elevation: Subtle shadow for depth on cards or menus */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
 
 }
+
+
+/* ---------------------------------------------------------
+   RESET STYLE
+   --------------------------------------------------------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margins and paddings */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul[role='list'],
+ol[role='list'],
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+  /* Ensure the height is always at least 100% */
+  height: -webkit-fill-available;
+}
+
+/* Set core body defaults */
+body {
+  /* Technical Reset: Ensure the body spans the full height of the device */
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  /* Technical Reset: Remove default margin from all browsers */
+  margin: 0;
+  /* Technical Reset: Improve text rendering speed */
+  text-rendering: optimizeSpeed;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove animations for people who prefer them off */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 
 /* ---------------------------------------------------------
    GLOBAL STYLES
@@ -177,36 +261,89 @@ html {
 body {
   font-family: var(--font-main);
   font-size: var(--font-size-base);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-base);
+
   background-color: var(--color-bg-main);
   color: var(--color-text-main);
-  line-height: 1.6;
-  margin-top: var(--navbar-height);
+
+  padding-top: var(--navbar-height);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Headings */
 h1 {
   font-size: var(--font-size-5xl);
-  line-height: 1.1;
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-main);
 }
 
 h2 {
-  font-size: var(--font-size-4xl);
-  line-height: 1.2;
+  font-size: var(--font-size-3xl);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--spacing-md);
 }
 
 h3 {
   font-size: var(--font-size-2xl);
-  line-height: 1.3;
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-semibold);
 }
+
+h4 {
+  font-size: var(--font-size-xl);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-medium);
+}
+
+/*Body Text */
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--lh-base);
+  margin-bottom: var(--spacing-sm);
+  max-width: 65ch;
+}
+
+/* Links */
+a {
+  color: var(--color-action);
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: var(--fw-medium);
+}
+
+a:hover {
+  color: var(--color-highlight);
+}
+
+
+/* Code and Technical Data */
+code,
+pre {
+    font-family: var(--font-code);
+    font-size: var(--font-size-sm);
+}
+
+
+
+/* Utility Containers */
+.container {
+    max-width: var(--container-max-width);
+    margin-inline: auto;
+    padding-inline: var(--container-gutter);
+}
+
+
 
 img {
   max-width: 100%;
   display: block;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
 
 .text-gradient {
   background: linear-gradient(135deg, var(--color-highlight), var(--color-action));
@@ -499,10 +636,6 @@ footer {
        ========================================== */
 
 .portfolio-grid {
-  /*display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: var(--spacing-lg);*/
-
   border: 3px dotted peru;
   display: flex;
   flex-direction: column;
