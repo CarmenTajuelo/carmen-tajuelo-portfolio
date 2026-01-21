@@ -825,16 +825,18 @@ img {
 /* ==========================================
        FOOTER
        ========================================== */
-
-.footer {
-  background: var(--color-primary);
+/* LAYER 1: The Block */
+.footer-block {
+  background-color: var(--color-primary);
   color: var(--color-text-inverse);
-  padding: var(--spacing-xl) var(--spacing-md) var(--spacing-md);
+  padding-block: var(--spacing-xl) var(--spacing-md);
   position: relative;
+  margin-top: var(--spacing-2xl);
   overflow: hidden;
 }
 
-.footer::before {
+/* Border accent at the top */
+.footer-block::before {
   content: '';
   position: absolute;
   top: 0;
@@ -844,55 +846,52 @@ img {
   background: linear-gradient(90deg, var(--color-highlight), var(--color-action), var(--color-highlight));
 }
 
-.footer__container {
-  max-width: 1400px;
-  margin: 0 auto;
-  text-align: center;
+/* LAYER 3: The Content */
+.footer-content {
+  gap: var(--spacing-lg);
 }
 
 .footer__logo {
   font-size: var(--font-size-3xl);
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   background: linear-gradient(135deg, var(--color-highlight), var(--color-action));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
 }
 
 .footer__tagline {
-  font-size: var(--font-size-lg);
   opacity: 0.7;
-  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-sm);
 }
 
 .footer__links {
   display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
   justify-content: center;
-  gap: var(--spacing-lg);
-  list-style: none;
-  margin-bottom: var(--spacing-md);
 }
 
 .footer__link {
   color: var(--color-text-inverse);
-  font-weight: 500;
-  transition: all var(--transition);
+  font-size: var(--font-size-sm);
+  transition: color var(--transition);
 }
 
 .footer__link:hover {
   color: var(--color-highlight);
-  transform: translateY(-2px);
 }
 
-.footer__copyright {
-  font-size: var(--font-size-sm);
-  opacity: 0.5;
+.footer__bottom {
+  width: 100%;
   padding-top: var(--spacing-md);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-
+.footer__copyright {
+  font-size: var(--font-size-xs);
+  opacity: 0.5;
+}
 
 
 /* ==========================================
