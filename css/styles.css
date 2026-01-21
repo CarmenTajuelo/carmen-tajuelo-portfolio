@@ -324,17 +324,17 @@ a:hover {
 /* Code and Technical Data */
 code,
 pre {
-    font-family: var(--font-code);
-    font-size: var(--font-size-sm);
+  font-family: var(--font-code);
+  font-size: var(--font-size-sm);
 }
 
 
 
 /* Utility Containers */
 .container {
-    max-width: var(--container-max-width);
-    margin-inline: auto;
-    padding-inline: var(--container-gutter);
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-gutter);
 }
 
 
@@ -360,24 +360,43 @@ img {
    --------------------------------------------------------- */
 
 /* LAYER 1: BLOCK (The Section)
-   Defines the semantic context and vertical breathing room
-*/
+   Only: full width and vertical padding. */
 
-section {
+.section {
   padding-block: var(--spacing-lg);
   width: 100%;
 }
 
-footer {
+/*footer {
   padding-block: var(--spacing-md);
   width: 100%;
+}*/
+
+
+/* LAYER 2: CONTAINER
+   Only: max-width and centering. */
+.container {
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-gutter);
+}
+
+/* LAYER 3: The Content Layout
+   Generic class to stack elements with a standard gap */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  text-align: center;
 }
 
 
 
-/* LAYER 2: CONTAINER
-   Defines max-width and keeps content centered
-*/
+
+/* ---------------------------------------------------------
+   NAVBAR
+   --------------------------------------------------------- */
 
 .header__section {
   width: 100%;
@@ -417,22 +436,7 @@ footer {
   pointer-events: auto;
 }
 
-@keyframes glow-pulse {
-  0% {
-    box-shadow: 0 0 10px rgba(233, 30, 140, 0.4),
-      0 0 20px rgba(233, 30, 140, 0.1);
-  }
 
-  50% {
-    box-shadow: 0 0 20px rgba(233, 30, 140, 0.6),
-      0 0 40px rgba(233, 30, 140, 0.2);
-  }
-
-  100% {
-    box-shadow: 0 0 10px rgba(233, 30, 140, 0.4),
-      0 0 20px rgba(233, 30, 140, 0.1);
-  }
-}
 
 .header__content:hover {
   animation-play-state: paused;
@@ -479,18 +483,6 @@ footer {
   animation: fadeInDown 0.5s ease forwards;
 }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .nav__list {
   display: flex;
   flex-direction: column;
@@ -530,6 +522,35 @@ footer {
   color: var(--color-text-inverse);
   cursor: pointer;
   padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .nav__menu.open {
+    background: linear-gradient(145deg, rgba(199, 22, 117, 0.95) 0%, rgba(145, 12, 84, 0.95) 100%);
+    padding: var(--spacing-md) 0;
+  }
+
+  .nav__list {
+    gap: var(--spacing-sm);
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav__menu {
+    display: flex;
+
+    padding: 0;
+    position: static;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+  }
+
+  .nav__actions {
+    display: none;
+  }
 }
 
 
@@ -588,18 +609,6 @@ footer {
   text-align: center;
 }
 
-/*.section__label {
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  background: linear-gradient(135deg, var(--color-fuchsia), var(--color-accent));
-  color: white;
-  font-size: var(--font-size-xs);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  border-radius: 50px;
-  margin-bottom: var(--spacing-sm);
-}*/
 
 .section__label {
   font-family: var(--font-code);
@@ -625,9 +634,6 @@ footer {
   margin: 0 auto;
 }
 
-
-
-/* PROJECTS */
 
 
 
@@ -754,8 +760,21 @@ footer {
 }
 
 
+@media (min-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
-/* STACK */
+
+@media (min-width: 1024px) {
+  .portfolio-grid {
+    /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+    flex-direction: row;
+  }
+
+}
+
 
 /* ==========================================
        TOOLS - COMPACT GRID
@@ -791,9 +810,6 @@ footer {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
-
-
-
 }
 
 .tool-card {
@@ -842,6 +858,20 @@ footer {
   gap: 0.75rem;
 }
 
+
+@media (min-width: 768px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .tools-grid {
+    flex-direction: row;
+  }
+
+}
 
 /* ==========================================
        ABOUT - GRADIENT CARD
@@ -911,6 +941,12 @@ footer {
   font-style: italic;
   color: var(--color-primary);
   margin: var(--spacing-md) 0;
+}
+
+@media (min-width: 768px) {
+  .about-card {
+    padding: var(--spacing-md);
+  }
 }
 
 
@@ -987,64 +1023,35 @@ footer {
 
 
 
-/* ======================================================== */
-/* ==================== Tablet - 768px ==================== */
-/* ======================================================== */
-@media (min-width: 768px) {
-  .nav__menu.open {
-    background: linear-gradient(145deg, rgba(199, 22, 117, 0.95) 0%, rgba(145, 12, 84, 0.95) 100%);
-    padding: var(--spacing-md) 0;
+/* ==========================================
+       ANIMATIONS
+       ========================================== */
+
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(233, 30, 140, 0.4),
+      0 0 20px rgba(233, 30, 140, 0.1);
   }
 
-  .nav__list {
-    gap: var(--spacing-sm);
+  50% {
+    box-shadow: 0 0 20px rgba(233, 30, 140, 0.6),
+      0 0 40px rgba(233, 30, 140, 0.2);
   }
 
-
-
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .tools-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-card {
-    padding: var(--spacing-md);
+  100% {
+    box-shadow: 0 0 10px rgba(233, 30, 140, 0.4),
+      0 0 20px rgba(233, 30, 140, 0.1);
   }
 }
 
-/* ======================================================== */
-/* ==================== Desktop - 1024px ================== */
-/* ======================================================== */
-@media (min-width: 1024px) {
-  .nav__menu {
-    display: flex;
-
-    padding: 0;
-    position: static;
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
 
-  .nav__list {
-    flex-direction: row;
-    gap: var(--spacing-lg);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-
-  .nav__actions {
-    display: none;
-  }
-
-
-
-  .portfolio-grid {
-    /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
-    flex-direction: row;
-  }
-
-  .tools-grid {
-    flex-direction: row;
-  }
-
-
 }
