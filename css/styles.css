@@ -558,11 +558,11 @@ pre {
        PROJECTS & PORTFOLIO
        ========================================== */
 
-.projects-intro {
+.projects__intro {
   margin-bottom: var(--spacing-lg);
 }
 
-.portfolio-grid {
+.projects__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: var(--spacing-lg);
