@@ -335,7 +335,7 @@ pre {
 /* LAYER 1: BLOCK (The Section)
    Only: full width and vertical padding. */
 .section {
-  border: 3px dotted red; 
+  border: 3px dotted red;
   padding-block: var(--spacing-lg);
   width: 100%;
 }
@@ -524,7 +524,7 @@ pre {
 }
 
 .hero__photo {
-  
+
   width: clamp(150px, 25vw, 250px);
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -581,7 +581,7 @@ pre {
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-md), 0 0 20px rgba(var(--color-highlight-rgb), 0.1);
   border-color: var(--color-highlight);
 }
@@ -657,8 +657,8 @@ pre {
 
 .tool-card:hover {
   transform: translateY(-5px);
-  border-color: var(--color-accent);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-md), 0 0 20px rgba(var(--color-highlight-rgb), 0.1);
+  border-color: var(--color-highlight);
 }
 
 .tool-card__name {
