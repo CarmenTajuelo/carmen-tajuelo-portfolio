@@ -570,14 +570,19 @@ pre {
 }
 
 .project-card {
-  background: var(--color-bg-secondary);
+  background: linear-gradient(135deg, rgba(233, 30, 140, 0.1), rgba(0, 166, 181, 0.1));
   border-radius: var(--border-radius-md);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: transform var(--transition), box-shadow var(--transition);
-  border: 1px solid rgba(var(--color-primary-rgb), 0.1);
   text-align: left;
+
+  backdrop-filter: blur(20px);
+  border-radius: var(--border-radius-lg);
+  border: 2px solid transparent;
+  box-shadow: var(--shadow-md);
+  background-clip: padding-box;
 }
 
 .project-card:hover {
@@ -651,7 +656,7 @@ pre {
   background: white;
   padding: var(--spacing-md);
   border-radius: var(--border-radius-md);
-  border: 1px solid rgba(var(--color-primary-rgb), 0.05);
+  border: 2px solid rgba(var(--color-primary-rgb), 0.05);
   transition: all var(--transition);
 }
 
@@ -717,7 +722,6 @@ pre {
 
 .about-card__intro .highlight {
   color: var(--color-highlight);
-
 }
 
 .about-card__text {
