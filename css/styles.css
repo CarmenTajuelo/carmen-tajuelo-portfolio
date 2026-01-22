@@ -335,6 +335,7 @@ pre {
 /* LAYER 1: BLOCK (The Section)
    Only: full width and vertical padding. */
 .section {
+  border: 3px dotted red; 
   padding-block: var(--spacing-lg);
   width: 100%;
 }
@@ -342,6 +343,7 @@ pre {
 /* LAYER 2: CONTAINER
    Only: max-width and centering. */
 .container {
+  border: 3px dotted rgb(85, 72, 0);
   max-width: var(--container-max-width);
   margin-inline: auto;
   padding-inline: var(--container-gutter);
@@ -350,6 +352,7 @@ pre {
 /* LAYER 3: The Content Layout
    Generic class to stack elements with a standard gap */
 .content {
+  border: 3px dotted blueviolet;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -362,7 +365,6 @@ pre {
    NAVBAR
    --------------------------------------------------------- */
 .nav-block {
-
   width: 100%;
 
   position: fixed;
@@ -373,11 +375,9 @@ pre {
 
   pointer-events: none;
   padding-top: var(--spacing-md);
-
 }
 
 .nav-content {
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -524,6 +524,7 @@ pre {
 }
 
 .hero__photo {
+  
   width: clamp(150px, 25vw, 250px);
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -551,62 +552,6 @@ pre {
     padding-block: var(--spacing-2xl);
   }
 }
-
-/* ==========================================
-       SECTION BASE
-       ========================================== */
-/*.section {
-  border: 3px dotted rgb(17, 0, 255);
-  padding: var(--spacing-lg) var(--spacing-md);
-  position: relative;
-  width: 100%;
-}
-
-.container {
-  border: 3px dotted rgb(181, 72, 83);
-  max-width: 1200px;
-  margin: 0 auto;
-
-}
-
-.content {
-  border: 3px dotted rgb(0, 255, 229);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  gap: var(--spacing-md);
-
-  text-align: center;
-}
-
-
-.section__label {
-  font-family: var(--font-code);
-  font-size: var(--font-size-sm);
-  color: var(--color-highlight);
-  font-weight: 600;
-  margin-bottom: var(--spacing-xs);
-  order: -2;
-}
-
-.section__title {
-  font-size: var(--font-size-4xl);
-  font-weight: 800;
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-sm);
-}
-
-.section__description {
-  font-size: var(--font-size-lg);
-  color: var(--color-text-main);
-  opacity: 0.7;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-*/
 
 
 /* ==========================================
