@@ -615,16 +615,16 @@ pre {
    STACK & TOOLS
    --------------------------------------------------------- */
 
-.stack-intro {
+.tools__intro {
   margin-bottom: var(--spacing-xl);
 }
 
-.tools-wrapper {
+.tools__wrapper {
   width: 100%;
   text-align: left;
 }
 
-.tools-category__title {
+.tools__category-title {
   font-size: var(--font-size-xl);
   font-weight: var(--fw-semibold);
   margin-bottom: var(--spacing-md);
@@ -633,7 +633,7 @@ pre {
   gap: var(--spacing-sm);
 }
 
-.tools-category__title::before {
+.tools__category-title::before {
   content: '';
   width: 4px;
   height: 24px;
@@ -641,7 +641,7 @@ pre {
   border-radius: var(--border-radius-pill);
 }
 
-.tools-grid {
+.tools__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: var(--spacing-md);
@@ -765,7 +765,7 @@ pre {
 }
 
 /* LAYER 3: The Content */
-.footer-content {
+.footer__content {
   gap: var(--spacing-lg);
 }
 
