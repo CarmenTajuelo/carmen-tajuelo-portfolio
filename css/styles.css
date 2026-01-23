@@ -104,9 +104,9 @@
 
   /* Font Families */
   /* Primary font: Modern, geometric, and highly legible */
-  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-main: 'Outfit', sans-serif;
   /* Monospace font: Used for code snippets, numbers, or technical data */
-  --font-code: 'Fira Code', 'Cascadia Code', 'Source Code Pro', monospace;
+  --font-code: 'Fira Code', monospace;
 
 
 
@@ -274,17 +274,19 @@ body {
 
 /* Headings */
 h1 {
+
   font-size: var(--font-size-5xl);
   line-height: var(--lh-tight);
   font-weight: var(--fw-bold);
   color: var(--color-text-main);
+  padding: var(--spacing-md);
 }
 
 h2 {
   font-size: var(--font-size-3xl);
   line-height: var(--lh-tight);
   font-weight: var(--fw-semibold);
-  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-sm);
 }
 
 h3 {
@@ -520,11 +522,10 @@ pre {
        ========================================== */
 .hero-content {
   padding-block: var(--spacing-xl);
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 
 .hero__photo {
-
   width: clamp(150px, 25vw, 250px);
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -559,7 +560,7 @@ pre {
        ========================================== */
 
 .projects__intro {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
 }
 
 .projects__grid {
@@ -570,7 +571,8 @@ pre {
 }
 
 .project-card {
-  background: linear-gradient(135deg, rgba(233, 30, 140, 0.1), rgba(0, 166, 181, 0.1));
+  /*background: linear-gradient(135deg, rgba(233, 30, 140, 0.1), rgba(0, 166, 181, 0.1));*/
+  background: linear-gradient(135deg, rgba(255, 0, 140, 0.1), rgba(0, 234, 255, 0.1));
   border-radius: var(--border-radius-md);
   overflow: hidden;
   display: flex;
@@ -621,7 +623,7 @@ pre {
    --------------------------------------------------------- */
 
 .tools__intro {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-sm);
 }
 
 .tools__wrapper {
@@ -687,6 +689,10 @@ pre {
   gap: var(--spacing-lg);
 }
 
+.about-intro {
+  margin-bottom: var(--spacing-sm);
+}
+
 .about-card {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
   backdrop-filter: blur(20px);
@@ -698,6 +704,7 @@ pre {
   background-clip: padding-box;
 
   text-align: left;
+
   position: relative;
   overflow: hidden;
 }
@@ -740,6 +747,12 @@ pre {
   font-style: italic;
 
   margin-block: var(--spacing-md);
+}
+
+@media (min-width: 1024px) {
+  .about-card {
+    text-align: justify;
+  }
 }
 
 
@@ -864,6 +877,14 @@ pre {
   display: inline-block;
 }
 
+
+.section__label {
+  font-family: var(--font-code);
+  font-size: var(--font-size-sm);
+  color: var(--color-highlight);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
 
 /* Visibility & Layout Helpers */
 .sr-only {
