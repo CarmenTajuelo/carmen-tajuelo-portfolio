@@ -874,7 +874,7 @@ pre {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  display: inline-block;
+  display: inline;
 }
 
 
