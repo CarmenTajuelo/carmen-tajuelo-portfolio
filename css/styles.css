@@ -266,7 +266,7 @@ body {
   background-color: var(--color-bg-main);
   color: var(--color-text-main);
 
-  padding-top: var(--navbar-height);
+  /*padding-top: var(--navbar-height);*/
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -515,39 +515,428 @@ pre {
 
 
 /* ==========================================
-       HERO SECTION
-       ========================================== */
-.hero-content {
-  padding-block: var(--spacing-xl);
-  gap: var(--spacing-md);
+HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
+==========================================*/ 
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-bg-main) 0%, #FFE5F4 50%, var(--color-bg-main) 100%);
+  padding-top: var(--spacing-xl);
 }
 
-.hero__photo {
-  width: clamp(150px, 25vw, 250px);
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: var(--border-radius-circle);
-  border: 4px solid var(--color-highlight-subtle);
-  box-shadow: var(--glow);
+/* CAPA 1: Gradiente diagonal grande */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -20%;
+  width: 800px;
+  height: 800px;
+  background: linear-gradient(135deg,
+      rgba(var(--color-highlight-rgb), 0.2) 0%,
+      rgba(var(--color-action-rgb), 0.15) 50%,
+      transparent 100%);
+  border-radius: 40%;
+  animation: float 20s ease-in-out infinite;
+  filter: blur(60px);
+}
+
+/* CAPA 2: Círculo fucsia inferior izquierda */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -25%;
+  left: -15%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle,
+      rgba(var(--color-highlight-rgb), 0.18) 0%,
+      rgba(var(--color-highlight-rgb), 0.08) 40%,
+      transparent 70%);
+  animation: float 15s ease-in-out infinite reverse;
+  filter: blur(40px);
+}
+
+/* CAPA 3: Elemento decorativo superior izquierda */
+.hero .hero__wrapper::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(45deg,
+      rgba(var(--color-action-rgb), 0.12) 0%,
+      transparent 60%);
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: 0;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+/* CAPA 4: Elemento decorativo derecha medio */
+.hero .hero__wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle,
+      rgba(var(--color-highlight-rgb), 0.15) 0%,
+      rgba(var(--color-action-rgb), 0.1) 50%,
+      transparent 70%);
+  border-radius: 50%;
+  filter: blur(45px);
+  z-index: 0;
+  animation: float 18s ease-in-out infinite;
+}
+
+/* Animaciones para las capas */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -40px) scale(1.05);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* Layout principal */
+.hero__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+  padding-block: var(--spacing-xl);
+  position: relative;
+  z-index: 2;
+}
+
+/* Contenido de texto */
+.hero__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.hero__badge {
+  display: inline-block;
+  align-self: center;
+  font-family: var(--font-code);
+  font-size: var(--font-size-sm);
+  color: var(--color-highlight);
+  font-weight: var(--fw-semibold);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--color-highlight-subtle);
+  border-radius: var(--border-radius-sm);
+  border-left: 3px solid var(--color-highlight);
+  backdrop-filter: blur(10px);
+}
+
+.hero__name {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--fw-bold);
+  margin: 0;
+  line-height: var(--lh-tight);
 }
 
 .hero__tagline {
   font-size: var(--font-size-3xl);
   font-weight: var(--fw-semibold);
-  max-width: 20ch;
+  margin: 0;
+  line-height: var(--lh-tight);
 }
 
 .hero__description {
   font-size: var(--font-size-lg);
-  color: var(--color-text-main);
-  opacity: 0.9;
+  line-height: var(--lh-loose);
+  color: var(--color-text-muted);
   max-width: 60ch;
   margin-inline: auto;
 }
 
+/* Botones de acción */
+.hero__actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-sm);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-weight: var(--fw-semibold);
+  font-size: var(--font-size-base);
+  border-radius: var(--border-radius-pill);
+  transition: all var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, var(--color-highlight), var(--color-highlight-dark));
+  color: white;
+  border: 2px solid transparent;
+  box-shadow: var(--glow);
+}
+
+.btn--primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(var(--color-highlight-rgb), 0.5);
+}
+
+.btn--outline {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn--outline:hover {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  transform: translateY(-4px);
+}
+
+/* Visual de la imagen */
+.hero__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+.hero__image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Elemento decorativo detrás de la imagen */
+.hero__image-container::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: linear-gradient(135deg,
+      rgba(var(--color-highlight-rgb), 0.2),
+      rgba(var(--color-action-rgb), 0.15));
+  border-radius: var(--border-radius-lg);
+  filter: blur(30px);
+  z-index: -1;
+  animation: glow 4s ease-in-out infinite;
+}
+
+@keyframes glow {
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.hero__photo {
+  width: clamp(200px, 60vw, 350px);
+  aspect-ratio: 1 / 1;
+  border-radius: var(--border-radius-lg);
+  border: 3px solid var(--color-accent);
+  box-shadow:
+    20px 20px 0px var(--color-highlight-subtle),
+    0 10px 40px rgba(var(--color-highlight-rgb), 0.3);
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Badge flotante */
+.hero__floating-badge {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  background: rgba(var(--color-bg-main-rgb), 0.95);
+  backdrop-filter: blur(10px);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    0 0 0 3px var(--color-highlight-subtle);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  border: 2px solid var(--color-accent);
+  animation: floating 3s ease-in-out infinite;
+  z-index: 2;
+}
+
+.badge__icon {
+  color: var(--color-highlight);
+  font-size: var(--font-size-2xl);
+  line-height: 1;
+}
+
+.badge__text {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-xs);
+  font-family: var(--font-code);
+  line-height: 1.3;
+}
+
+.badge__text strong {
+  font-size: var(--font-size-base);
+  color: var(--color-primary);
+  font-weight: var(--fw-bold);
+}
+
+.badge__text span {
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@keyframes floating {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ==========================================
+   TABLET - 768px
+   ========================================== */
+@media (min-width: 768px) {
+  .hero__badge {
+    align-self: flex-start;
+  }
+
+  .hero__description {
+    margin-inline: 0;
+  }
+
+  .hero__photo {
+    width: clamp(250px, 40vw, 350px);
+  }
+
+  .hero__floating-badge {
+    bottom: 10px;
+    left: -20px;
+  }
+}
+
+/* ==========================================
+   DESKTOP - 1024px (DOS COLUMNAS)
+   ========================================== */
 @media (min-width: 1024px) {
-  .hero-content {
+  .hero__wrapper {
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--spacing-2xl);
     padding-block: var(--spacing-2xl);
+  }
+
+  .hero__photo {
+    width: clamp(300px, 35vw, 450px);
+  }
+
+  .hero__floating-badge {
+    bottom: 20px;
+    left: -30px;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .badge__icon {
+    font-size: var(--font-size-3xl);
+  }
+
+  .badge__text strong {
+    font-size: var(--font-size-lg);
+  }
+
+  /* Ajustar capas para desktop */
+  .hero::before {
+    width: 1000px;
+    height: 1000px;
+    top: -40%;
+    right: -15%;
+  }
+
+  .hero::after {
+    width: 700px;
+    height: 700px;
+  }
+
+  .hero .hero__wrapper::before {
+    width: 500px;
+    height: 500px;
+    left: -15%;
+  }
+
+  .hero .hero__wrapper::after {
+    width: 450px;
+    height: 450px;
+    right: -10%;
+  }
+}
+
+/* ==========================================
+   DESKTOP LARGE - 1440px+
+   ========================================== */
+@media (min-width: 1440px) {
+  .hero__wrapper {
+    grid-template-columns: 1.3fr 1fr;
+  }
+
+  .hero__photo {
+    width: 500px;
+  }
+
+  /* Hacer las capas aún más grandes y dramáticas */
+  .hero::before {
+    width: 1200px;
   }
 }
 
