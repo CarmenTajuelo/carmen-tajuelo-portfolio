@@ -516,7 +516,7 @@ pre {
 
 /* ==========================================
 HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
-==========================================*/ 
+==========================================*/
 .hero {
   min-height: 100vh;
   display: flex;
@@ -1043,9 +1043,17 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
 .tool-card {
   background: white;
   padding: var(--spacing-md);
-  border-radius: var(--border-radius-md);
-  border: 2px solid rgba(var(--color-primary-rgb), 0.05);
   transition: all var(--transition);
+
+  border-radius: var(--border-radius-lg);
+  border: 3px solid var(--color-accent);
+  box-shadow:
+    20px 20px 0px var(--color-highlight-subtle),
+    0 10px 40px rgba(var(--color-highlight-rgb), 0.3);
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
 }
 
 .tool-card:hover {
