@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carmen Tajuelo | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fira+Code:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR SECTION -->
+    <header class="nav-block">
+        <div class="container">
+            <div class="nav-content">
+
+                <div class="nav__logo">✦ Portfolio</div>
+
+                <nav class="nav__menu" id="navMenu" aria-label="Navegación principal">
+                    <ul class="nav__list">
+                        <li><a href="index.html#home" class="nav__link">Inicio</a></li>
+                        <li><a href="index.html#projects" class="nav__link">Proyectos</a></li>
+                        <li><a href="stack-dossier.html" class="nav__link nav__link--active">Mi Stack</a></li>
+                        <li><a href="index.html#about" class="nav__link">Sobre mí</a></li>
+                    </ul>
+                </nav>
+
+                <div class="nav__actions">
+                    <button class="nav__hamburger" id="navToggle" aria-label="Abrir menú de navegación"
+                        aria-expanded="false" aria-controls="navMenu">☰</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- STACK DOSSIER SECTION -->
+    <main>
+        <section class="section dossier-hero">
+            <div class="container">
+                <div class="content">
+                    <header class="dossier__header">
+                        <p class="section__label">// research_and_documentation
+                        </p>
+                        <h1>Mi <span class="text-gradient">Stack</span></h1>
+                        <p class="section__description">Análisis técnicos, guías de configuración y aprendizajes sobre
+                            mi stack de desarrollo.</p>
+                    </header>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="dossier-list">
+            <div class="container">
+                <div class="content">
+
+                    <div class="dossier__grid">
+
+                        <article class="dossier-card" id="github-profile-essentials">
+                            <header class="dossier-card__header">
+                                <div class="dossier-card__meta">
+                                    <time class="dossier-card__date">2026-01-24</time>
+                                    <span class="dossier-card__category">Productivity</span>
+                                </div>
+                                <h2 class="dossier-card__title">GitHub Profile Essentials</h2>
+                                <h3 class="dossier-card__subtitle">Maximizando el impacto visual de tu identidad como
+                                    dev.</h3>
+                            </header>
+
+                            <div class="dossier-card__body">
+                                <p class="dossier-card__excerpt">
+                                    Configurar un perfil de GitHub no es solo diseño; es una herramienta de venta
+                                    técnica. En esta nota documento cómo usar Readme.so para crear una estructura
+                                    jerárquica que resalte mis proyectos más relevantes y mi stack actual.
+                                </p>
+
+                                <div class="dossier-card__tags">
+                                    <span class="tag">#Github</span>
+                                    <span class="tag">#PersonalBranding</span>
+                                    <span class="tag">#Markdown</span>
+                                </div>
+                            </div>
+
+                            <footer class="dossier-card__footer">
+                                <div class="dossier-card__stack-info">
+                                    <strong>Stack relacionado:</strong> Git, Markdown, UI/UX
+                                </div>
+                                <!--<a href="post-detalle-ejemplo.html" class="dossier-card__link">Leer análisis completo
+                                    <span>→</span></a>-->
+                            </footer>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-block">
+        <div class="container">
+            <div class="content footer__content">
+
+                <div class="footer__brand">
+                    <div class="footer__logo">✦ Portfolio</div>
+                    <p class="footer__tagline">Desarrollo web con creatividad y pasión</p>
+                </div>
+
+                <nav class="footer__nav" aria-label="Navegación secundaria">
+                    <ul class="footer__links">
+                        <li><a href="#home" class="footer__link">Inicio</a></li>
+                        <li><a href="#projects" class="footer__link">Proyectos</a></li>
+                        <li><a href="#tools" class="footer__link">Mi Stack</a></li>
+                        <li><a href="#about" class="footer__link">Sobre mí</a></li>
+                        <li><a href="#" class="footer__link">GitHub</a></li>
+                        <li><a href="#" class="footer__link">LinkedIn</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer__bottom">
+                    <p class="footer__copyright">© 2026 Carmen Tajuelo • Diseñado y desarrollado con ♥ y código limpio
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navbar.js"></script>
+
+</body>
+
+</html>

@@ -337,7 +337,6 @@ pre {
 /* LAYER 1: BLOCK (The Section)
    Only: full width and vertical padding. */
 .section {
-  border: 3px dotted red;
   padding-block: var(--spacing-lg);
   width: 100%;
 }
@@ -345,7 +344,6 @@ pre {
 /* LAYER 2: CONTAINER
    Only: max-width and centering. */
 .container {
-  border: 3px dotted rgb(85, 72, 0);
   max-width: var(--container-max-width);
   margin-inline: auto;
   padding-inline: var(--container-gutter);
@@ -354,7 +352,6 @@ pre {
 /* LAYER 3: The Content Layout
    Generic class to stack elements with a standard gap */
 .content {
-  border: 3px dotted blueviolet;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -924,4 +921,156 @@ pre {
 
 .fw-medium {
   font-weight: var(--fw-medium);
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   STACK STYLES
+   ========================================== */
+
+.dossier-hero {
+  padding-top: var(--spacing-2xl);
+}
+
+
+.dossier__grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.dossier-card {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.dossier-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-highlight);
+}
+
+.dossier-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.dossier-card__date {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+  font-family: var(--font-code);
+}
+
+.dossier-card__category {
+  font-family: var(--font-code);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--border-radius-pill);
+}
+
+.dossier-card__title {
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--spacing-xs);
+}
+
+.dossier-card__subtitle {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-muted);
+  font-weight: var(--fw-medium);
+}
+
+.dossier-card__excerpt {
+  font-size: var(--font-size-base);
+  line-height: var(--lh-base);
+  color: var(--color-text-main);
+}
+
+.dossier-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+}
+
+.tag {
+  font-family: var(--font-code);
+  font-size: var(--font-size-sm);
+  color: var(--color-highlight);
+  background-color: var(--color-highlight-subtle);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--border-radius-sm);
+}
+
+.dossier-card__footer {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(var(--color-primary-rgb), 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.dossier-card__stack-info {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.dossier-card__stack-info strong {
+  color: var(--color-primary);
+}
+
+.dossier-card__link {
+  font-weight: var(--fw-semibold);
+  color: var(--color-action);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.dossier-card__link:hover {
+  color: var(--color-highlight);
+}
+
+.dossier-card__link span {
+  display: inline-block;
+  transition: transform var(--transition);
+}
+
+.dossier-card__link:hover span {
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .dossier-card {
+    padding: var(--spacing-md);
+  }
+
+  .dossier-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
