@@ -1092,7 +1092,9 @@ HERO SECTION
 
 .tool-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-md), 0 0 20px rgba(var(--color-highlight-rgb), 0.1);
+  box-shadow:
+    25px 25px 0px var(--color-highlight-subtle),
+    0 15px 50px rgba(var(--color-highlight-rgb), 0.3);
   border-color: var(--color-highlight);
 }
 
