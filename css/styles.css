@@ -280,6 +280,7 @@ h1 {
   font-weight: var(--fw-bold);
   color: var(--color-text-main);
   padding: var(--spacing-md);
+  text-align: center;
 }
 
 h2 {
@@ -350,26 +351,24 @@ pre {
 
 /* --- SECCIONES IMPARES (Azul -> Rosa) --- */
 .section:nth-child(odd) {
-  background: 
+  background:
     /* Brillo lateral */
     linear-gradient(to right, rgba(var(--color-action-rgb), 0.04) 0%, transparent 15%, transparent 85%, rgba(var(--color-action-rgb), 0.04) 100%),
     /* Flujo vertical: Termina EXACTAMENTE en Rosa 0.05 */
-    linear-gradient(to bottom, 
-      rgba(var(--color-action-rgb), 0.05) 0%, 
-      rgba(var(--color-highlight-rgb), 0.05) 100%
-    );
+    linear-gradient(to bottom,
+      rgba(var(--color-action-rgb), 0.05) 0%,
+      rgba(var(--color-highlight-rgb), 0.05) 100%);
 }
 
 /* --- SECCIONES PARES (Rosa -> Azul) --- */
 .section:nth-child(even) {
-  background: 
+  background:
     /* Brillo lateral */
     linear-gradient(to right, rgba(var(--color-highlight-rgb), 0.04) 0%, transparent 15%, transparent 85%, rgba(var(--color-highlight-rgb), 0.04) 100%),
     /* Flujo vertical: Empieza EXACTAMENTE en Rosa 0.05 y termina en Azul 0.05 */
-    linear-gradient(to bottom, 
-      rgba(var(--color-highlight-rgb), 0.05) 0%, 
-      rgba(var(--color-action-rgb), 0.05) 100%
-    );
+    linear-gradient(to bottom,
+      rgba(var(--color-highlight-rgb), 0.05) 0%,
+      rgba(var(--color-action-rgb), 0.05) 100%);
 }
 
 /* LAYER 2: CONTAINER
@@ -657,19 +656,17 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
   }
 }
 
-/* Layout principal */
 .hero__wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-lg);
   align-items: center;
   padding-block: var(--spacing-md);
   position: relative;
   z-index: 2;
 }
 
-/* Contenido de texto */
-.hero__text-content {
+.hero__text {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
@@ -700,7 +697,6 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
   margin-inline: auto;
 }
 
-/* Botones de acción */
 .hero__actions {
   display: flex;
   gap: var(--spacing-sm);
@@ -748,7 +744,6 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
   transform: translateY(-4px);
 }
 
-/* Visual de la imagen */
 .hero__visual {
   display: flex;
   justify-content: center;
@@ -762,7 +757,6 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
   display: inline-block;
 }
 
-/* Elemento decorativo detrás de la imagen */
 .hero__image-container::before {
   content: '';
   position: absolute;
@@ -805,7 +799,6 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
   z-index: 1;
 }
 
-/* Badge flotante */
 .hero__floating-badge {
   position: absolute;
   bottom: -10px;
@@ -863,9 +856,7 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
   }
 }
 
-/* ==========================================
-   TABLET - 768px
-   ========================================== */
+
 @media (min-width: 768px) {
   .hero__badge {
     align-self: flex-start;
@@ -885,35 +876,13 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
   }
 }
 
-/* ==========================================
-   DESKTOP - 1024px (DOS COLUMNAS)
-   ========================================== */
+
 @media (min-width: 1024px) {
   .hero__wrapper {
     grid-template-columns: 1.2fr 1fr;
-    gap: var(--spacing-2xl);
-    padding-block: var(--spacing-2xl);
+    grid-template-rows: auto auto auto;
   }
 
-  .hero__photo {
-    width: clamp(300px, 35vw, 450px);
-  }
-
-  .hero__floating-badge {
-    bottom: 20px;
-    left: -30px;
-    padding: var(--spacing-md) var(--spacing-lg);
-  }
-
-  .badge__icon {
-    font-size: var(--font-size-3xl);
-  }
-
-  .badge__text strong {
-    font-size: var(--font-size-lg);
-  }
-
-  /* Ajustar capas para desktop */
   .hero::before {
     width: 1000px;
     height: 1000px;
@@ -937,24 +906,52 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
     height: 450px;
     right: -10%;
   }
-}
 
-/* ==========================================
-   DESKTOP LARGE - 1440px+
-   ========================================== */
-@media (min-width: 1440px) {
-  .hero__wrapper {
-    grid-template-columns: 1.3fr 1fr;
+  .hero__title {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .hero__text {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: end;
+  }
+
+  .hero__visual {
+    grid-column: 2;
+    grid-row: 2 / 4;
+    justify-self: center;
   }
 
   .hero__photo {
-    width: 500px;
+    width: clamp(300px, 35vw, 450px);
   }
 
-  /* Hacer las capas aún más grandes y dramáticas */
-  .hero::before {
-    width: 1200px;
+  .hero__floating-badge {
+    bottom: 20px;
+    left: -30px;
+    padding: var(--spacing-md) var(--spacing-lg);
   }
+
+  .badge__icon {
+    font-size: var(--font-size-3xl);
+  }
+
+  .badge__text strong {
+    font-size: var(--font-size-lg);
+  }
+
+
+  .hero__actions {
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: flex-start;
+    align-self: start;
+  }
+
 }
 
 
