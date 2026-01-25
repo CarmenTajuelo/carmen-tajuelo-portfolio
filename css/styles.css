@@ -545,7 +545,7 @@ pre {
 
 
 /* ==========================================
-HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
+HERO SECTION
 ==========================================*/
 .hero {
   min-height: 100vh;
@@ -625,7 +625,6 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
   animation: float 18s ease-in-out infinite;
 }
 
-/* Animaciones para las capas */
 @keyframes float {
 
   0%,
@@ -971,25 +970,33 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
 }
 
 .project-card {
-  /*background: linear-gradient(135deg, rgba(233, 30, 140, 0.1), rgba(0, 166, 181, 0.1));*/
-  background: linear-gradient(135deg, rgba(255, 0, 140, 0.1), rgba(0, 234, 255, 0.1));
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
+  /* Fondo sólido con un toque de tus colores de acento */
+  background: white;
   display: flex;
   flex-direction: column;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: all var(--transition);
   text-align: left;
 
-  backdrop-filter: blur(20px);
   border-radius: var(--border-radius-lg);
-  border: 2px solid transparent;
-  box-shadow: var(--shadow-md);
-  background-clip: padding-box;
+  overflow: hidden;
+
+  border: 3px solid var(--color-accent);
+
+
+  box-shadow:
+    20px 20px 0px var(--color-highlight-subtle),
+    0 10px 40px rgba(var(--color-highlight-rgb), 0.2);
+
+  position: relative;
+
+  z-index: 1;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-md), 0 0 20px rgba(var(--color-highlight-rgb), 0.1);
+  box-shadow:
+    25px 25px 0px var(--color-highlight-subtle),
+    0 15px 50px rgba(var(--color-highlight-rgb), 0.3);
   border-color: var(--color-highlight);
 }
 
@@ -997,6 +1004,7 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
   aspect-ratio: 16 / 9;
   overflow: hidden;
   position: relative;
+  border-bottom: 2px solid var(--color-bg-subtle);
 }
 
 .project-card__image img {
@@ -1005,17 +1013,29 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
   object-fit: cover;
 }
 
+.project-card:hover .project-card__image img {
+  transform: scale(1.05);
+}
+
 .project-card__content {
   padding: var(--spacing-md);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  background: linear-gradient(180deg, white 0%, rgba(var(--color-highlight-rgb), 0.03) 100%);
+  gap: var(--spacing-xs);
 }
 
 .project-card__title {
   font-size: var(--font-size-2xl);
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
 }
+
+.project-card__tags {
+  margin-top: auto;
+}
+
+
 
 
 /* ---------------------------------------------------------
@@ -1092,7 +1112,6 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
 /* ---------------------------------------------------------
    ABOUT SECTION
    --------------------------------------------------------- */
-
 .about-content {
   gap: var(--spacing-lg);
   justify-content: center;
@@ -1101,22 +1120,6 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
 .about-intro {
   margin-bottom: var(--spacing-sm);
 }
-
-/*.about-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-  backdrop-filter: blur(20px);
-  border-radius: var(--border-radius-lg);
-  padding: var(--spacing-lg);
-  border: 3px solid transparent;
-  box-shadow: var(--shadow-md);
-  max-width: 800px;
-  background-clip: padding-box;
-
-  text-align: left;
-
-  position: relative;
-  overflow: hidden;
-}*/
 
 .about-card {
   background: white;
