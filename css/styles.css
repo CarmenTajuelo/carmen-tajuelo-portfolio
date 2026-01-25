@@ -258,7 +258,6 @@ html {
 }
 
 body {
-  border: 3px dotted red;
   font-family: var(--font-main);
   font-size: var(--font-size-base);
   font-weight: var(--fw-regular);
@@ -376,9 +375,9 @@ pre {
 }
 
 
-/* ---------------------------------------------------------
-   NAVBAR
-   --------------------------------------------------------- */
+/* ==========================================
+       NAVBAR
+       ========================================== */
 .nav-block {
   width: 100%;
 
@@ -593,9 +592,9 @@ HERO SECTION
   66% {
     transform: translate(-20px, 20px) scale(0.95);
   }
-}*/
+}
 
-@keyframes pulse {
+*/ @keyframes pulse {
 
   0%,
   100% {
@@ -1090,6 +1089,7 @@ HERO SECTION
   font-size: var(--font-size-lg);
   color: var(--color-primary);
   margin-bottom: var(--spacing-xs);
+
 }
 
 .tool-card__description {
