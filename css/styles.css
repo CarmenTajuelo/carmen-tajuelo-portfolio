@@ -283,7 +283,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-4xl);
   line-height: var(--lh-tight);
   font-weight: var(--fw-semibold);
   padding: var(--spacing-sm);
@@ -663,7 +663,7 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
   grid-template-columns: 1fr;
   gap: var(--spacing-xl);
   align-items: center;
-  padding-block: var(--spacing-xl);
+  padding-block: var(--spacing-md);
   position: relative;
   z-index: 2;
 }
@@ -678,7 +678,7 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
   z-index: 3;
 }
 
-.hero__badge {
+/*.hero__badge {
   display: inline-block;
   align-self: center;
   font-family: var(--font-code);
@@ -690,21 +690,7 @@ HERO SECTION - RESPONSIVE Y MODERNO CON CAPAS
   border-radius: var(--border-radius-sm);
   border-left: 3px solid var(--color-highlight);
   backdrop-filter: blur(10px);
-}
-
-.hero__name {
-  font-size: var(--font-size-5xl);
-  font-weight: var(--fw-bold);
-  margin: 0;
-  line-height: var(--lh-tight);
-}
-
-.hero__tagline {
-  font-size: var(--font-size-3xl);
-  font-weight: var(--fw-semibold);
-  margin: 0;
-  line-height: var(--lh-tight);
-}
+}*/
 
 .hero__description {
   font-size: var(--font-size-lg);
