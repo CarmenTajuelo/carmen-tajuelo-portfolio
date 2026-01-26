@@ -956,7 +956,6 @@ HERO SECTION
 }
 
 .project-card {
-  /* Fondo sólido con un toque de tus colores de acento */
   background: white;
   display: flex;
   flex-direction: column;
@@ -967,7 +966,6 @@ HERO SECTION
   overflow: hidden;
 
   border: 3px solid var(--color-accent);
-
 
   box-shadow:
     20px 20px 0px var(--color-highlight-subtle),
@@ -1025,9 +1023,9 @@ HERO SECTION
 
 
 
-/* ---------------------------------------------------------
-   STACK & TOOLS
-   --------------------------------------------------------- */
+/* ==========================================
+       PROJECTS & PORTFOLIO
+       ========================================== */
 
 .tools__intro {
   margin-bottom: var(--spacing-sm);
