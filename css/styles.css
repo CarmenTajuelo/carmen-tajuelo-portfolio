@@ -110,6 +110,11 @@
 
 
 
+
+
+  
+
+
   /* ---- FLUID SPACING SYSTEM ---- */
   /* 2XL: Maximum separation for high-end layouts (Fluid: 80px > 128px) */
   --spacing-2xl: clamp(5rem, 10vw + 1rem, 8rem);
