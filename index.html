@@ -62,7 +62,7 @@
                     </h1>
 
                     <div class="hero__text">
-                        <h2 >Carmen <span class="text-gradient">Tajuelo</span></h2>
+                        <h2>Carmen <span class="text-gradient">Tajuelo</span></h2>
                         <p class="hero__description">Transformo ideas en soluciones webs centradas en el usuario.
                             <br>Enfoque en código limpio, arquitectura sólida y diseño moderno.
                         </p>
@@ -129,7 +129,8 @@
                                     <span class="tag" role="listitem">BEM</span>
                                 </div>
 
-                                <a href="https://github.com/CarmenTajuelo/carmen-tajuelo-portfolio" target="_blank" class="project-card__link"
+                                <a href="https://github.com/CarmenTajuelo/carmen-tajuelo-portfolio" target="_blank"
+                                    class="project-card__link"
                                     aria-label="Explorar el código fuente de Mi Portfolio Web en GitHub">
                                     Explorar Código <span aria-hidden="true">→</span>
                                 </a>
@@ -254,9 +255,11 @@
 
                             <article class="tool-card">
                                 <h4 class="tool-card__name text-gradient">Lightroom</h4>
-                                <p class="tool-card__description">Mi centro de operaciones como fotógrafa, donde
-                                    organizo, edito, exporto y archivo las fotografías de mis proyectos fotográficos
-                                    (soy fotógrafa profesional).
+                                <p class="tool-card__description">De día webdev... y de noche fotógrafa especializada en
+                                    fotografiar estrellas de Rock. Lightroom es mi centro de operaciones
+                                    donde organizo, edito, exporto y archivo las fotografías
+                                    de mis proyectos fotográficos.
+
                                 <p>
 
                             </article>
@@ -264,7 +267,8 @@
                             <article class="tool-card">
                                 <h4 class="tool-card__name text-gradient">Photoshop</h4>
                                 <p class="tool-card__description">Mi complemento perfecto a Lightroom cuando necesito
-                                    modificar la foto en post-producción con IA Generativa.</p>
+                                    modificar la foto en post-producción o necesito corregir elementos específicos con
+                                    IA Generativa.</p>
 
                             </article>
 
@@ -343,7 +347,10 @@
 
                             <div class="about-card__text">
                                 <p>
-                                    Cuento con más de 12 años de experiencia como <strong><a href="https://www.getblend.com/blog/what-is-a-localization-engineer-role-skills/" target="_blank" class="text-gradient">Ingeniera de Localización</a></strong>,
+                                    Cuento con más de 12 años de experiencia como <strong><a
+                                            href="https://www.getblend.com/blog/what-is-a-localization-engineer-role-skills/"
+                                            target="_blank" class="text-gradient">Ingeniera de
+                                            Localización</a></strong>,
                                     especializada en gestión de proyectos técnicos y migraciones de clientes entre
                                     plataformas. Durante este tiempo he trabajado en
                                     entornos altamente técnicos y estructurados, en directa colaboración con equipos de
@@ -458,20 +465,20 @@
             navToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
         });
 
-        
+
         (function () {
             const themeToggle = document.getElementById('themeToggle');
             const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
             const html = document.documentElement;
 
-            
+
             const savedTheme = localStorage.getItem('theme');
             const initialTheme = savedTheme || 'dark';
 
-            
+
             setTheme(initialTheme);
 
-            
+
             themeToggle.addEventListener('click', () => {
                 const currentTheme = html.getAttribute('data-theme');
                 const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
