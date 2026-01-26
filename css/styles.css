@@ -1,6 +1,4 @@
-/* ==========================================
-       GLOBAL VARIABLES
-       ========================================== */
+/* ==== GLOBAL VARIABLES ==== */
 :root {
 
   /* ----  COLORS ---- */
@@ -104,22 +102,11 @@
 
   /* Font Families */
   /* Primary font: Modern, geometric, and highly legible */
-  /*--font-main: 'Outfit', sans-serif;
-  /* Monospace font: Used for code snippets, numbers, or technical data */
-  /*--font-code: 'Fira Code', monospace;
-
-
-/* Fuente para Títulos (Reemplaza a Outfit/Satoshi) */
+  /*--font-main: 'Outfit', sans-serif;*/
   --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  
-  /* Fuente para Cuerpo (Reemplaza a DM Sans) */
-  /*--font-body: "Inter", -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  
-  /* Fuente Mono (Reemplaza a Fira Code) */
+  /* Monospace font: Used for code snippets, numbers, or technical data */
+  /*--font-code: 'Fira Code', monospace;*/
   --font-code: ui-monospace, SFMono-Regular, "Cascadia Code", "Segoe UI Mono", monospace;
-
-
-  
 
 
   /* ---- FLUID SPACING SYSTEM ---- */
@@ -181,9 +168,7 @@
 }
 
 
-/* ==========================================
-       RESET STYLE
-       ========================================== */
+/* ==== RESET STYLE ====  */
 
 /* Box sizing rules */
 *,
@@ -259,9 +244,7 @@ select {
 }
 
 
-/* ==========================================
-       GLOBAL STYLES
-       ========================================== */
+/* ==== GLOBAL STYLES ==== */
 
 html {
   min-height: 100%;
@@ -348,9 +331,7 @@ pre {
 }
 
 
-/* ---------------------------------------------------------
-   ARCHITECTURE: 3-LAYER SYSTEM
-   --------------------------------------------------------- */
+/* ==== ARCHITECTURE: 3-LAYER SYSTEM ==== */
 
 /* LAYER 1: BLOCK (The Section)
    Only: full width and vertical padding. */
@@ -360,11 +341,8 @@ pre {
 
   position: relative;
   background-repeat: no-repeat;
-
   background-size: 8% 100%, 8% 100%;
-
   backdrop-filter: blur(2px);
-
   scroll-margin-top: 100px;
 }
 
@@ -387,9 +365,7 @@ pre {
 }
 
 
-/* ==========================================
-       NAVBAR
-       ========================================== */
+/* ==== NAVBAR ==== */
 .nav-block {
   width: 100%;
 
@@ -424,6 +400,23 @@ pre {
   animation: glow-pulse 3s infinite ease-in-out;
   transition: all var(--transition);
   pointer-events: auto;
+}
+
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(233, 30, 140, 0.4),
+      0 0 20px rgba(233, 30, 140, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(233, 30, 140, 0.6),
+      0 0 40px rgba(233, 30, 140, 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgba(233, 30, 140, 0.4),
+      0 0 20px rgba(233, 30, 140, 0.1);
+  }
 }
 
 .header__content:hover {
@@ -471,6 +464,18 @@ pre {
 
 .nav__menu.open .nav__link {
   animation: fadeInDown 0.5s ease forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav__menu.open .nav__link:hover {
@@ -542,9 +547,7 @@ pre {
 }
 
 
-/* ==========================================
-HERO SECTION
-==========================================*/
+/* ==== HERO SECTION ==== */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -555,7 +558,6 @@ HERO SECTION
   padding-top: var(--spacing-xl);
 }
 
-/*
 /* CAPA 1: Gradiente diagonal grande */
 .hero::before {
   content: '';
@@ -606,7 +608,7 @@ HERO SECTION
   }
 }
 
-*/ @keyframes pulse {
+@keyframes pulse {
 
   0%,
   100% {
@@ -952,9 +954,7 @@ HERO SECTION
 }
 
 
-/* ==========================================
-       PROJECTS & PORTFOLIO
-       ========================================== */
+/* ==== PROJECTS & PORTFOLIO ==== */
 
 .projects__intro {
   margin-bottom: var(--spacing-sm);
@@ -1033,11 +1033,7 @@ HERO SECTION
 }
 
 
-
-
-/* ==========================================
-       PROJECTS & PORTFOLIO
-       ========================================== */
+/* ==== PROJECTS & PORTFOLIO ==== */
 
 .tools__intro {
   margin-bottom: var(--spacing-sm);
@@ -1109,9 +1105,7 @@ HERO SECTION
 }
 
 
-/* ---------------------------------------------------------
-   ABOUT SECTION
-   --------------------------------------------------------- */
+/* ==== ABOUT SECTION ==== */
 .about-content {
   padding-bottom: var(--spacing-xl);
 }
@@ -1167,9 +1161,7 @@ HERO SECTION
 
 
 
-/* ==========================================
-       FOOTER
-       ========================================== */
+/* ==== FOOTER ==== */
 /* LAYER 1: The Block */
 .footer-block {
   background-color: var(--color-primary);
@@ -1241,46 +1233,8 @@ HERO SECTION
   opacity: 0.5;
 }
 
+/* ==== UTILITIES ==== */
 
-/* ==========================================
-       ANIMATIONS
-       ========================================== */
-
-@keyframes glow-pulse {
-  0% {
-    box-shadow: 0 0 10px rgba(233, 30, 140, 0.4),
-      0 0 20px rgba(233, 30, 140, 0.1);
-  }
-
-  50% {
-    box-shadow: 0 0 20px rgba(233, 30, 140, 0.6),
-      0 0 40px rgba(233, 30, 140, 0.2);
-  }
-
-  100% {
-    box-shadow: 0 0 10px rgba(233, 30, 140, 0.4),
-      0 0 20px rgba(233, 30, 140, 0.1);
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* ==========================================
-    UTILITIES
-       ========================================== */
-
-/* Text Gradients */
 .text-gradient {
   background: linear-gradient(135deg, var(--color-highlight), var(--color-action));
   -webkit-background-clip: text;
@@ -1290,48 +1244,10 @@ HERO SECTION
   display: inline;
 }
 
-
 .section__label {
   font-family: var(--font-code);
   font-size: var(--font-size-sm);
   color: var(--color-highlight);
   font-weight: 600;
   margin-bottom: var(--spacing-xs);
-}
-
-/* Visibility & Layout Helpers */
-.sr-only {
-  /* Screen readers only - accessibility */
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-/* Text alignment overrides */
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-/* Display helpers */
-.hidden {
-  display: none !important;
-}
-
-/* Weight modifiers */
-.fw-bold {
-  font-weight: var(--fw-bold);
-}
-
-.fw-medium {
-  font-weight: var(--fw-medium);
 }
