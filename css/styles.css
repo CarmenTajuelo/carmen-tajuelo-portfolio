@@ -247,12 +247,15 @@ select {
 /* ==== GLOBAL STYLES ==== */
 
 html {
-  min-height: 100%;
-  height: auto;
+  height: 100vh;
+  /*
+  height: auto;*/
   background-color: var(--color-bg-main);
 }
 
 body {
+  min-height: 100%;
+
   font-family: var(--font-main);
   font-size: var(--font-size-base);
   font-weight: var(--fw-regular);
@@ -269,7 +272,7 @@ body {
       rgba(var(--color-bg-secondary-rgb), 0.4) 100%);
 
   background-attachment: fixed;
-  background-size: 200% 200%;
+  background-size: cover;
 
 
 }
