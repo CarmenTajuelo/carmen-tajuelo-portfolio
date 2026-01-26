@@ -59,7 +59,7 @@
 
                     <div class="hero__visual">
                         <div class="hero__image-container">
-                            <img src="assets/images/pictures/carmen-tajuelo-web-developer.jpg" class="hero__photo"
+                            <img src="assets/images/pictures/carmen-tajuelo-web-developer.webp" class="hero__photo"
                                 alt="Carmen Tajuelo, desarrolladora web">
                             <div class="hero__floating-badge">
                                 <span class="badge__icon">✦</span>
@@ -101,8 +101,9 @@
                             </div>
                             <div class="project-card__content">
                                 <h3 class="project-card__title text-gradient">Mi Portfolio Web</h3>
-                                <p class="project-card__description">Plataforma personal con diseño responsive y
-                                    arquitectura limpia.</p>
+                                <p class="project-card__description">Mi portfolio principal donde centralizo todos mis
+                                    proyectos: Diseño responsive, código limpio y algún que otro detalle sutil azul y
+                                    fucsia (pst... dark mode in progress).</p>
                                 <div class="project-card__tags">
                                     <span class="tag">HTML5</span>
                                     <span class="tag">CSS3</span>
@@ -119,11 +120,10 @@
 
                             </div>
                             <div class="project-card__content">
-                                <h3 class="project-card__title text-gradient">Mi Portfolio Web</h3>
-                                <p class="project-card__description"> Web corporativa para servicios jurídicos con
-                                    gestión de citas via Whatsapp, sección
-                                    de áreas de
-                                    especialidad y diseño elegante y profesional.</p>
+                                <h3 class="project-card__title text-gradient">Web Servicios Jurídicos</h3>
+                                <p class="project-card__description"> Web corporativa para despacho de abogados con
+                                    sección de áreas de especialidad, diseño elegante, branding profesional y gestión de
+                                    citas via Whatsapp.</p>
                                 <div class="project-card__tags">
                                     <span class="tag">HTML5</span>
                                     <span class="tag">CSS3</span>
@@ -140,10 +140,10 @@
 
                             </div>
                             <div class="project-card__content">
-                                <h3 class="project-card__title text-gradient">Mi Portfolio Web</h3>
-                                <p class="project-card__description">Portfolio especializado en fotografía de eventos
-                                    con galerías dinámicas,
-                                    carga optimizada de imágenes de alta resolución y diseño elegante.</p>
+                                <h3 class="project-card__title text-gradient">Web Fotógrafos Boda</h3>
+                                <p class="project-card__description">Portfolio premium especializado en fotografía de
+                                    bodas con galerías dinámicas y optimización avanzada de imagen. Diseño
+                                    minimalista optimizado para dispositivos móviles</p>
                                 <div class="project-card__tags">
                                     <span class="tag">HTML5</span>
                                     <span class="tag">CSS3</span>
@@ -177,26 +177,28 @@
 
                         <div class="tools__grid">
 
-                            <article class="tool-card">
+                            <article class="tool-card" aria-labelledby="tool-vscode">
                                 <h4 class="tool-card__name text-gradient">VS Code</h4>
-                                <p class="tool-card__description">Mi centro de operaciones. Mi herramienta por
-                                    excelencia que utilizo para trabajar con código. </p>
-
+                                <p class="tool-card__description">Mi centro de operaciones base. Mi editor por
+                                    excelencia que utilizo para trabajar con código, desplegar la terminal y sincronizar
+                                    los repositorios de Github.</p>
                             </article>
 
-                            <article class="tool-card">
-                                <h4 class="tool-card__name text-gradient">Git & GitHub</h4>
-                                <p class="tool-card__description">Versionado y colaboración. La red de seguridad
-                                    necesaria para cualquier proyecto profesional.</p>
-
+                            <article class="tool-card" aria-labelledby="tool-github">
+                                <h4 class="tool-card__name text-gradient">Git & Github</h4>
+                                <p class="tool-card__description">Lo mejor del mundo para trabajar con versiones de
+                                    código de forma no destructiva, con commits y ramas. Once you go Git... You never go
+                                    back...</p>
                             </article>
 
-                            <article class="tool-card">
-                                <h4 class="tool-card__name text-gradient">Chrome DevTools</h4>
-                                <p class="tool-card__description">El microscopio del desarrollador. Debugging y
-                                    optimización para interfaces impecables.</p>
-
+                            <article class="tool-card" aria-labelledby="tool-devtools">
+                                <h4 id="tool-devtools" class="tool-card__name text-gradient">Chrome DevTools</h4>
+                                <p class="tool-card__description">
+                                    Mi herramienta favorita para inspeccionar, depurar, analizar
+                                    y optimizar el código y la interfaz en tiempo real. F12-check-fix-repeat...
+                                </p>
                             </article>
+
                         </div>
                     </div>
 
@@ -208,22 +210,25 @@
 
                             <article class="tool-card">
                                 <h4 class="tool-card__name text-gradient">Figma</h4>
-                                <p class="tool-card__description">Los planos antes del código. La importancia de un
-                                    diseño de interfaces y prototipado antes de escribir tu primer div.</p>
+                                <p class="tool-card__description">Mis planos antes del código. Mi lienzo en blanco donde
+                                    prototipo los diseños de las webs que construyo. Utilizo plantillas y elementos
+                                    predefinidos con flujos de diseño automáticos. </p>
 
                             </article>
 
                             <article class="tool-card">
                                 <h4 class="tool-card__name text-gradient">Lightroom</h4>
-                                <p class="tool-card__description">De la captura al resultado final: optimizando el flujo
-                                    de trabajo fotográfico.</p>
+                                <p class="tool-card__description">Mi centro de operaciones como fotógrafa, donde
+                                    organizo, edito, exporto y archivo las fotografías de mis proyectos fotográficos
+                                    (soy fotógrafa profesional).
+                                <p>
 
                             </article>
 
                             <article class="tool-card">
                                 <h4 class="tool-card__name text-gradient">Photoshop</h4>
-                                <p class="tool-card__description">Expandiendo horizontes creativos y optimizando la
-                                    post-producción con IA Generativa.</p>
+                                <p class="tool-card__description">Mi complemento perfecto a Lightroom cuando necesito
+                                    modificar la foto en post-producción con IA Generativa.</p>
 
                             </article>
 
@@ -269,9 +274,6 @@
 
                         </div>
                     </div>
-
-
-
 
                 </div>
             </div>

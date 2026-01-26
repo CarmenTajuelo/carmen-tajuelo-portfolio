@@ -1010,7 +1010,7 @@ HERO SECTION
   flex-direction: column;
   flex-grow: 1;
   background: linear-gradient(180deg, white 0%, rgba(var(--color-highlight-rgb), 0.03) 100%);
-  gap: var(--spacing-xs);
+  gap: var(--spacing-sm);
 }
 
 .project-card__title {
