@@ -15,7 +15,7 @@
     <meta property="og:image"
         content="https://carmentajuelo.github.io/carmen-tajuelo-portfolio/assets/images/pictures/carmen-tajuelo-web-developer.webp">
 
-    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <link rel="icon" type="image/png" href="assets/images/icons/favicon.ico">
 
@@ -43,7 +43,11 @@
                 <div class="nav__actions">
                     <button class="nav__hamburger" id="navToggle" aria-label="Abrir menú de navegación"
                         aria-expanded="false" aria-controls="navMenu">☰</button>
+
                 </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span class="theme-toggle__icon">🌙</span>
+                </button>
             </div>
         </div>
     </header>
@@ -453,6 +457,46 @@
             navToggle.textContent = isOpen ? '✕' : '☰';
             navToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
         });
+
+        
+        (function () {
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
+            const html = document.documentElement;
+
+            
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+
+            
+            setTheme(initialTheme);
+
+            
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                setTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+
+            function setTheme(theme) {
+                html.setAttribute('data-theme', theme);
+                themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+                themeToggle.setAttribute('aria-label',
+                    theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'
+                );
+            }
+
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {
+                    setTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        })();
+
+
     </script>
 
 </body>
