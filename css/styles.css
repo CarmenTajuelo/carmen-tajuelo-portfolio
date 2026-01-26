@@ -104,12 +104,19 @@
 
   /* Font Families */
   /* Primary font: Modern, geometric, and highly legible */
-  --font-main: 'Outfit', sans-serif;
+  /*--font-main: 'Outfit', sans-serif;
   /* Monospace font: Used for code snippets, numbers, or technical data */
-  --font-code: 'Fira Code', monospace;
+  /*--font-code: 'Fira Code', monospace;
 
 
-
+/* Fuente para Títulos (Reemplaza a Outfit/Satoshi) */
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Fuente para Cuerpo (Reemplaza a DM Sans) */
+  /*--font-body: "Inter", -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Fuente Mono (Reemplaza a Fira Code) */
+  --font-code: ui-monospace, SFMono-Regular, "Cascadia Code", "Segoe UI Mono", monospace;
 
 
   
