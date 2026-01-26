@@ -93,63 +93,81 @@
                     </header>
 
                     <div class="projects__grid">
-
-                        <article class="project-card">
+                        <article class="project-card" aria-labelledby="project-title-1">
                             <div class="project-card__image">
                                 <img src="assets/images/icons/Carmen-Tajuelo-Portfolio-Personal.jpg"
-                                    alt="Mi Portfolio Web">
+                                    alt="Vista previa del diseño del Portfolio de Carmen Tajuelo">
                             </div>
+
                             <div class="project-card__content">
-                                <h3 class="project-card__title text-gradient">Mi Portfolio Web</h3>
-                                <p class="project-card__description">Mi portfolio principal donde centralizo todos mis
-                                    proyectos: Diseño responsive, código limpio y algún que otro detalle sutil azul y
-                                    fucsia (pst... dark mode in progress).</p>
-                                <div class="project-card__tags">
-                                    <span class="tag">HTML5</span>
-                                    <span class="tag">CSS3</span>
-                                    <span class="tag">BEM</span>
+                                <h3 id="project-title-1" class="project-card__title text-gradient">Mi Portfolio Web</h3>
+
+                                <p class="project-card__description">
+                                    Mi portfolio principal donde centralizo todos mis proyectos. Utilizo diseño responsive,
+                                    código limpio y algún que otro detalle sutil azul y fucsia (pst... dark mode in
+                                    progress).
+                                </p>
+
+                                <div class="project-card__tags" role="list" aria-label="Tecnologías usadas">
+                                    <span class="tag" role="listitem">HTML5</span>
+                                    <span class="tag" role="listitem">CSS3</span>
+                                    <span class="tag" role="listitem">BEM</span>
                                 </div>
-                                <a href="#" class="project-card__link">Explorar Código <span>→</span></a>
+
+                                <a href="#" class="project-card__link"
+                                    aria-label="Explorar el código fuente de Mi Portfolio Web en GitHub">
+                                    Explorar Código <span aria-hidden="true">→</span>
+                                </a>
                             </div>
                         </article>
 
-                        <article class="project-card">
+                        <article class="project-card" aria-labelledby="project-inma">
                             <div class="project-card__image">
-                                <img src="/carmen-tajuelo-portfolio/assets/images/icons/Inma-Abogada-Web.jpg"
-                                    alt="Sitio web de Inma Abogada">
-
+                                <img src="assets/images/icons/Inma-Abogada-Web.jpg"
+                                    alt="Captura de pantalla de la web corporativa de servicios jurídicos">
                             </div>
                             <div class="project-card__content">
-                                <h3 class="project-card__title text-gradient">Web Servicios Jurídicos</h3>
-                                <p class="project-card__description"> Web corporativa para despacho de abogados con
-                                    sección de áreas de especialidad, diseño elegante, branding profesional y gestión de
-                                    citas via Whatsapp.</p>
-                                <div class="project-card__tags">
-                                    <span class="tag">HTML5</span>
-                                    <span class="tag">CSS3</span>
-                                    <span class="tag">BEM</span>
+                                <h3 id="project-inma" class="project-card__title text-gradient">Web Servicios Jurídicos
+                                </h3>
+                                <p class="project-card__description">
+                                    Solución corporativa para despacho de abogados. Destaca por su branding profesional,
+                                    arquitectura de servicios especializada e integración de canal directo vía WhatsApp
+                                    para la gestión de citas en tiempo real.
+
+                                </p>
+                                <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
+                                    <span class="tag" role="listitem">HTML5</span>
+                                    <span class="tag" role="listitem">CSS3</span>
+                                    <span class="tag" role="listitem">Mobile First</span>
                                 </div>
-                                <a href="#" class="project-card__link">Explorar Código <span>→</span></a>
+                                <a href="#" class="project-card__link"
+                                    aria-label="Ver código de Web Servicios Jurídicos en GitHub">
+                                    Explorar Código <span aria-hidden="true">→</span>
+                                </a>
                             </div>
                         </article>
 
-                        <article class="project-card">
+                        <article class="project-card" aria-labelledby="project-boda">
                             <div class="project-card__image">
-                                <img src="/carmen-tajuelo-portfolio/assets/images/icons/Carmen Tajuelo - Portfolio - Fotografia Bodas.jpg"
-                                    alt="Portfolio Fotográfico de Bodas">
-
+                                <img src="assets/images/icons/Carmen Tajuelo - Portfolio - Fotografia Bodas.jpg"
+                                    alt="Vista previa del portfolio de fotografía con diseño minimalista">
                             </div>
                             <div class="project-card__content">
-                                <h3 class="project-card__title text-gradient">Web Fotógrafos Boda</h3>
-                                <p class="project-card__description">Portfolio premium especializado en fotografía de
-                                    bodas con galerías dinámicas y optimización avanzada de imagen. Diseño
-                                    minimalista optimizado para dispositivos móviles</p>
-                                <div class="project-card__tags">
-                                    <span class="tag">HTML5</span>
-                                    <span class="tag">CSS3</span>
-                                    <span class="tag">BEM</span>
+                                <h3 id="project-boda" class="project-card__title text-gradient">Web Fotografía Boda</h3>
+                                <p class="project-card__description">
+                                    Plataforma premium con enfoque en el impacto visual. Implementa galerías dinámicas
+                                    con carga optimizada (Lazy Loading) y una interfaz minimalista diseñada para
+                                    maximizar la conversión en dispositivos móviles.
+                                </p>
+                                <div class="project-card__tags" role="list" aria-label="Tecnologías utilizadas">
+                                    <span class="tag" role="listitem">UI/UX</span>
+                                    <span class="tag" role="listitem">Performance</span>
+                                    <span class="tag" role="listitem">BEM</span>
                                 </div>
-                                <a href="#" class="project-card__link">Explorar Código <span>→</span></a>
+                                <a href="#" class="project-card__link"
+                                    aria-label="Ver código de Photography Portfolio en GitHub">
+                                    Explorar Código <span aria-hidden="true">→</span>
+                                </a>
                             </div>
                         </article>
 
