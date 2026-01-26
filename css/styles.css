@@ -201,7 +201,6 @@ dd {
   padding: 0;
 }
 
-/* Remove list styles on ul, ol elements */
 ul,
 ol {
   list-style: none;
@@ -1116,7 +1115,6 @@ pre {
 
 
 /* ==== PROJECTS & PORTFOLIO ==== */
-
 .tools__intro {
   margin-bottom: var(--spacing-sm);
 }
@@ -1323,7 +1321,6 @@ pre {
 }
 
 /* ==== UTILITIES ==== */
-
 .text-gradient {
   background: linear-gradient(135deg, var(--color-highlight), var(--color-action));
   -webkit-background-clip: text;
