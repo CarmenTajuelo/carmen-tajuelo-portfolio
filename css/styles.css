@@ -534,6 +534,7 @@ pre {
 
 .nav__menu {
   display: none;
+  margin-left: auto;
 }
 
 .nav__menu.open {
@@ -542,21 +543,18 @@ pre {
   justify-content: center;
   align-items: center;
   
-
   position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
   height: 100dvh;
   
-
   background: linear-gradient(145deg, rgba(var(--color-highlight-dark-rgb), 0.98) 0%, rgba(145, 12, 84, 0.98) 100%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 0;
   z-index: 1000;
   
-
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--border-radius-lg);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
