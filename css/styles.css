@@ -1012,7 +1012,8 @@ pre {
   .hero__title {
     grid-column: 1 / 3;
     grid-row: 1;
-    min-height: calc(var(--font-size-5xl) * 4 * var(--lh-tight));
+    min-height: calc(var(--font-size-5xl) * 3 * var(--lh-tight));
+    padding: var(--spacing-md) 0;
   }
 
   .hero__text {
