@@ -728,9 +728,12 @@ pre {
   padding-block: var(--spacing-md);
   position: relative;
   z-index: 2;
-  min-height: 80vh
+  min-height: 80vh;
 }
 
+.hero__title {
+    padding-top: var(--spacing-xl);
+}
 .hero__text {
   display: flex;
   flex-direction: column;
