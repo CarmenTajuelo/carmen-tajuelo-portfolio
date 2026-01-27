@@ -1111,8 +1111,20 @@ pre {
   margin-top: auto;
 }
 
+.tag {
+  background: var(--color-highlight-subtle);
+  color: var(--color-highlight);
+  font-size: var(--font-size-xs);
+  font-weight: var(--fw-semibold);
+  padding: 4px 10px;
+  border-radius: var(--border-radius-pill);
+  border: 1px solid rgba(var(--color-highlight-rgb), 0.2);
+  white-space: nowrap;
+  transition: all var(--transition);
+}
 
-/* ==== PROJECTS & PORTFOLIO ==== */
+
+/* ==== TOOLS & STACK ==== */
 .tools__intro {
   margin-bottom: var(--spacing-sm);
 }
