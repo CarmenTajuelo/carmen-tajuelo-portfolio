@@ -492,6 +492,7 @@ pre {
   animation: glow-pulse 3s infinite ease-in-out;
   transition: all var(--transition);
   pointer-events: auto;
+  
 }
 
 @keyframes glow-pulse {
@@ -534,7 +535,7 @@ pre {
 
 .nav__menu {
   display: none;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 .nav__menu.open {
