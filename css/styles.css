@@ -404,8 +404,8 @@ pre {
     0 15px 50px rgba(var(--color-accent-rgb), 0.4);
 }
 [data-theme="dark"] .tool-card::before {
-  color: var(--color-text-fade-dark); /* Color más tenue en Dark Mode */
-  opacity: 0.03; /* Aún más sutil en oscuro para no distraer */
+  color: var(--color-text-fade-dark);
+  opacity: 0.03; 
 }
 
 [data-theme="dark"] .about-card__quote {
@@ -413,8 +413,6 @@ pre {
   color: var(--color-text-main-dark);
 
 }
-
-
 
 
 /* ==== ARCHITECTURE: 3-LAYER SYSTEM ==== */
@@ -1188,20 +1186,29 @@ pre {
 }
 
 .tool-card::before {
-  content: "</>";
   position: absolute;
   top: 40%;
   left: 30%;
-  transform: translate(10%, -20%);
-  font-family: var(--font-mono);
-  font-size: 10rem;
+  transform: translate(50%, 10%);
+  font-family: var(--font-code);
+  font-size: 7rem;
   color: var(--color-text-fade);
   opacity: 0.05;
   z-index: -1; 
   user-select: none;
   pointer-events: none;
-  transition: color var(--transition), opacity var(--transition);
 }
+
+.tools__grid--dev .tool-card::before {
+  content: "</>";
+}
+
+
+.tools__grid--design .tool-card::before {
+  content: "{}";
+  transform: translate(100%, 15%);
+}
+
 
 .tool-card:hover {
   transform: translateY(-5px);
