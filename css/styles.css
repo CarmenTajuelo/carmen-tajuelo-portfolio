@@ -267,6 +267,7 @@ body {
   min-height: 100vh;
   background-color: var(--color-bg-main);
   position: relative;
+  font-size: var(--font-size-base);
 }
 
 body::before {
@@ -317,7 +318,6 @@ h4 {
 }
 
 p {
-  font-size: var(--font-size-base);
   line-height: var(--lh-base);
   margin-bottom: var(--spacing-sm);
 }
@@ -758,7 +758,6 @@ pre {
   gap: var(--spacing-xs);
   padding: var(--spacing-sm) var(--spacing-md);
   font-weight: var(--fw-semibold);
-  font-size: var(--font-size-base);
   border-radius: var(--border-radius-pill);
   transition: all var(--transition);
   cursor: pointer;
@@ -913,7 +912,6 @@ pre {
 }
 
 .badge__text strong {
-  font-size: var(--font-size-base);
   color: var(--color-primary);
   font-weight: var(--fw-bold);
 }
@@ -1181,7 +1179,6 @@ pre {
 }
 
 .tool-card__description {
-  font-size: var(--font-size-sm);
   opacity: 0.8;
   margin-bottom: var(--spacing-sm);
 }
@@ -1328,14 +1325,6 @@ pre {
   background-clip: text;
   color: transparent;
   display: inline;
-}
-
-.section__label {
-  font-family: var(--font-code);
-  font-size: var(--font-size-sm);
-  color: var(--color-highlight);
-  font-weight: 600;
-  margin-bottom: var(--spacing-xs);
 }
 
 /* ==== DARK MODE ==== */
