@@ -737,6 +737,8 @@ pre {
 .hero__text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: var(--spacing-md);
   text-align: center;
   position: relative;
@@ -763,6 +765,7 @@ pre {
   color: var(--color-text-muted);
   max-width: 60ch;
   margin-inline: auto;
+  
 }
 
 .hero__actions {
