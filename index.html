@@ -457,11 +457,21 @@
 
         navToggle.addEventListener("click", () => {
             const isOpen = navMenu.classList.toggle("open");
+            document.body.classList.toggle('no-scroll');
             navToggle.setAttribute("aria-expanded", isOpen);
             navToggle.textContent = isOpen ? '✕' : '☰';
             navToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
         });
 
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                document.body.classList.remove('no-scroll');
+                navToggle.setAttribute("aria-expanded", "false");
+                navToggle.textContent = '☰';
+                navToggle.setAttribute("aria-label", "Abrir menú");
+            });
+        });
 
         (function () {
             const themeToggle = document.getElementById('themeToggle');
@@ -514,16 +524,12 @@
 
             function type() {
                 if (i < txt1.length) {
-                    // Creamos un nodo de texto para la letra y lo añadimos
                     span1.append(document.createTextNode(txt1.charAt(i)));
-                    // Movemos el cursor único al final del span1
                     span1.appendChild(cursor);
                     i++;
                     setTimeout(type, speed);
                 } else if (j < txt2.length) {
-                    // Hacemos lo mismo para la línea 2
                     span2.append(document.createTextNode(txt2.charAt(j)));
-                    // Movemos el cursor único al final del span2
                     span2.appendChild(cursor);
                     j++;
                     setTimeout(type, speed);
