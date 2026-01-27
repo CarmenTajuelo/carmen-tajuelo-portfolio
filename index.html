@@ -15,7 +15,7 @@
     <meta property="og:image"
         content="https://carmentajuelo.github.io/carmen-tajuelo-portfolio/assets/images/pictures/carmen-tajuelo-web-developer.webp">
 
-    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <link rel="icon" type="image/png" href="assets/images/icons/favicon_blue.ico">
 
@@ -58,7 +58,12 @@
         <section class="section hero" id="home">
             <div class="container">
                 <div class="hero__wrapper">
-                    <h1 class="hero__title">Desarrollo Web <br><span class="text-gradient">Creativo y Moderno</span>
+                    <!--h1 class="hero__title">Desarrollo Web <br><span class="text-gradient">Creativo y Moderno</span>
+                    </h1>-->
+                    <h1 class="hero__title typewriter-container">
+                        <span id="line1"></span><br>
+                        <span id="line2" class="text-gradient"></span>
+                        <span id="cursor" class="cursor"></span>
                     </h1>
 
                     <div class="hero__text">
@@ -494,6 +499,44 @@
             });
         })();
 
+
+        (function () {
+            const txt1 = "Desarrollo Web";
+            const txt2 = "Creativo y Moderno";
+            const speed = 100;
+
+            const span1 = document.getElementById("line1");
+            const span2 = document.getElementById("line2");
+            const cursor = document.getElementById("cursor");
+
+            let i = 0;
+            let j = 0;
+
+            function type() {
+                if (i < txt1.length) {
+                    // Creamos un nodo de texto para la letra y lo añadimos
+                    span1.append(document.createTextNode(txt1.charAt(i)));
+                    // Movemos el cursor único al final del span1
+                    span1.appendChild(cursor);
+                    i++;
+                    setTimeout(type, speed);
+                } else if (j < txt2.length) {
+                    // Hacemos lo mismo para la línea 2
+                    span2.append(document.createTextNode(txt2.charAt(j)));
+                    // Movemos el cursor único al final del span2
+                    span2.appendChild(cursor);
+                    j++;
+                    setTimeout(type, speed);
+                } else {
+                    // Ocultar el cursor al finalizar
+                    setTimeout(() => {
+                        cursor.style.display = 'none';
+                    }, 500);
+                }
+            }
+
+            window.addEventListener('load', type);
+        })();
 
     </script>
 
