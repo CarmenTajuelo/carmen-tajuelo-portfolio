@@ -15,7 +15,7 @@
     <meta property="og:image"
         content="https://carmentajuelo.github.io/carmen-tajuelo-portfolio/assets/images/pictures/carmen-tajuelo-web-developer.webp">
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.min.css">
 
     <link rel="icon" type="image/png" href="assets/images/icons/favicon_blue.ico">
 
@@ -452,6 +452,7 @@
     </footer>
 
     <script>
+        //hamburger menu
         const navToggle = document.getElementById("navToggle");
         const navMenu = document.getElementById("navMenu");
 
@@ -473,6 +474,7 @@
             });
         });
 
+        //theme toggle
         (function () {
             const themeToggle = document.getElementById('themeToggle');
             const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
@@ -509,7 +511,7 @@
             });
         })();
 
-
+        //typescript effect
         (function () {
             const txt1 = "Desarrollo Web";
             const txt2 = "Creativo y Moderno";
@@ -534,7 +536,6 @@
                     j++;
                     setTimeout(type, speed);
                 } else {
-                    // Ocultar el cursor al finalizar
                     //setTimeout(() => {
                     //   cursor.style.display = 'none';
                     // }, 500);

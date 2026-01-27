@@ -534,27 +534,7 @@ pre {
 
 .nav__menu {
   display: none;
-  /*margin-left: auto;*/
 }
-
-/*.nav__menu.open {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-
-  background: linear-gradient(145deg, rgba(var(--color-highlight-dark-rgb), 0.98) 0%, rgba(145, 12, 84, 0.98) 100%);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: var(--spacing-lg) 0;
-  border-radius: var(--border-radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-}*/
-
 
 .nav__menu.open {
   display: flex;
