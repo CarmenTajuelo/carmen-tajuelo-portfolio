@@ -173,6 +173,11 @@
   --color-text-muted-dark: rgba(245, 230, 240, 0.7);
   --color-card-bg-dark: #1a2f3e;
   --color-border-dark: rgba(233, 30, 140, 0.3);
+
+
+  /*--color-text-fade: rgba(0, 0, 0, 0.1); /* Texto tenue claro */
+  /*--color-text-fade-dark: rgba(255, 255, 255, 0.1); /* Texto tenue oscuro */
+
 }
 
 
@@ -397,6 +402,10 @@ pre {
   box-shadow:
     25px 25px 0px rgba(var(--color-accent-rgb), 0.2),
     0 15px 50px rgba(var(--color-accent-rgb), 0.4);
+}
+[data-theme="dark"] .tool-card::before {
+  color: var(--color-text-fade-dark); /* Color más tenue en Dark Mode */
+  opacity: 0.03; /* Aún más sutil en oscuro para no distraer */
 }
 
 [data-theme="dark"] .about-card__quote {
@@ -1175,6 +1184,23 @@ pre {
   display: block;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+}
+
+.tool-card::before {
+  content: "</>";
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(10%, -20%);
+  font-family: var(--font-mono);
+  font-size: 10rem;
+  color: var(--color-text-fade);
+  opacity: 0.05;
+  z-index: -1; 
+  user-select: none;
+  pointer-events: none;
+  transition: color var(--transition), opacity var(--transition);
 }
 
 .tool-card:hover {
