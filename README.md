@@ -2,6 +2,13 @@
 
 A professional, responsive, and scalable personal portfolio website designed to showcase projects, skills, and experience. This project follows strict software engineering principles for CSS architecture and responsive design.
 
+## 🌐 Live Website
+
+Check out the live version here: [https://carmentajuelo.github.io/carmen-tajuelo-portfolio/](https://carmentajuelo.github.io/carmen-tajuelo-portfolio/)
+
+Deployed in Github pages.
+
+
 ## 🚀 Features
 
 - **Fluid Design**: Typography and spacing scale naturally across devices using `clamp()`, reducing the need for excessive media queries.
