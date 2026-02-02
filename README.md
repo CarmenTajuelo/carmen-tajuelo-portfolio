@@ -4,7 +4,7 @@ A professional, responsive, and scalable personal portfolio website designed to 
 
 ## 🌐 Live Website
 
-Check out the live version here: [https://carmentajuelo.github.io/carmen-tajuelo-portfolio/](https://carmentajuelo.github.io/carmen-tajuelo-portfolio/)
+Check out the live version here: [https://carmentajuelo.github.io/carmen-tajuelo-portfolio/](https://carmentajuelo.github.io/carmen-tajuelo-portfolio-1.0/)
 
 Deployed in Github pages.
 
